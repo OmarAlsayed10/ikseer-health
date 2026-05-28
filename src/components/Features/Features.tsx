@@ -85,16 +85,6 @@ export function Features({ onRequestAccess, showAll = false, hideIntro = false }
             >
               {t.features.headline}
             </Text>
-            <Text
-              mt="4"
-              fontSize={{ base: '1rem', md: '1.125rem' }}
-              color="gray.600"
-              maxW="560px"
-              mx="auto"
-              className="animate-fade-up animate-delay-2"
-            >
-              {t.features.subheadline}
-            </Text>
           </Box>
         )}
 
