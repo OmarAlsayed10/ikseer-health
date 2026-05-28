@@ -1,0 +1,16 @@
+export const LEGAL_TOKENS = {
+  sectionGap: { base: '32px', md: '40px' },
+  headingSize: { base: '1.25rem', md: '1.5rem' },
+  headingColor: 'gray.900',
+  bodySize: { base: '0.9375rem', md: '1rem' },
+  bodyColor: 'gray.600',
+  listColor: 'gray.600',
+  bulletColor: 'teal.500',
+  effectiveDateColor: 'gray.500',
+  effectiveDateSize: '0.875rem',
+  cardBg: 'white',
+  cardBorder: 'gray.100',
+  cardShadow: '0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06)',
+  sectionNumberBg: 'teal.50',
+  sectionNumberColor: 'teal.600',
+} as const

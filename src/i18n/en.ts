@@ -247,8 +247,12 @@ export const en = {
       success:
         "Your request has been submitted. We'll review it and get back to you within 1–2 business days.",
       error: 'Something went wrong. Please try again.',
-      privacy:
-        'By submitting this form, you agree to our Privacy Policy and Terms of Service. Your information is used solely to evaluate your access request.',
+      privacyPrefix: 'I agree to the ',
+      privacyLink: 'Privacy Policy',
+      privacyAnd: ' and ',
+      termsLink: 'Terms of Service',
+      privacySuffix: '. My information is used solely to evaluate this access request.',
+      privacyRequired: 'You must agree to the Privacy Policy and Terms of Service.',
     },
   },
   footer: {
@@ -268,6 +272,298 @@ export const en = {
       terms: 'Terms of Service',
     },
     copyright: '© 2025 Nabd Clinic. All rights reserved.',
+  },
+  privacy: {
+    badge: 'Privacy Policy',
+    headline: 'Privacy Policy — Nabd Health',
+    effectiveDate: 'Effective Date: May 28, 2025',
+    lastUpdated: 'Last Updated: May 28, 2025',
+    sections: [
+      {
+        title: 'Introduction',
+        paragraphs: [
+          'Nabd Health is a digital healthcare technology platform that develops and operates a suite of applications designed to modernize and simplify healthcare management across clinics, pharmacies, and other medical facilities.',
+          'Our current products include:',
+          'Additional applications may be introduced under the Nabd Health platform in the future. This Privacy Policy applies to all current and future Nabd Health products, services, and the Nabd Health website, unless a specific product provides its own separate policy.',
+          'By using any Nabd Health product or visiting our website, you agree to the terms outlined in this Privacy Policy.',
+        ],
+        bullets: [
+          'Nabd Clinic — a comprehensive clinic management app for doctors and healthcare professionals.',
+          'Nabd Pharmacy — a pharmacy management solution (coming soon).',
+        ],
+      },
+      {
+        title: 'Data We Collect',
+        paragraphs: [
+          'Depending on which Nabd Health application you use, we may collect and store:',
+        ],
+        bullets: [
+          'Patient information: names, contact details, medical history, diagnoses, prescriptions, and invoices.',
+          'Doctor and staff information: names, professional credentials, clinic affiliations, and contact details.',
+          'Pharmacy data: medication inventory, dispensing records, and customer transaction data (Nabd Pharmacy, coming soon).',
+          'Usage data: app activity, login times, device information, and session logs.',
+          'Website data: standard analytics such as IP address, browser type, and pages visited when you browse the Nabd Health website.',
+        ],
+      },
+      {
+        title: 'How We Use Your Data',
+        paragraphs: [
+          'Data collected across Nabd Health products is used solely for:',
+          'We do not sell, rent, or share your data with third parties for marketing or advertising purposes.',
+        ],
+        bullets: [
+          'Providing, operating, and improving our applications and website.',
+          'Enabling clinic and pharmacy management features.',
+          'Generating invoices, prescriptions, and appointment or transaction records.',
+          'Sending OTP codes via WhatsApp for staff verification.',
+          'Displaying AI-assisted suggestions to healthcare providers.',
+          'Communicating product updates, new app launches, and service announcements to registered users.',
+        ],
+      },
+      {
+        title: 'Data Sharing Across Nabd Health Products',
+        paragraphs: [
+          'If you use more than one Nabd Health application, certain account-level information may be shared across products within the platform to provide a unified experience. This sharing is internal to Nabd Health only and does not involve any external parties.',
+        ],
+      },
+      {
+        title: 'AI Assistant Disclaimer',
+        paragraphs: [
+          'Nabd Clinic and future Nabd Health products may include an AI assistant designed to support healthcare professionals with suggestions, information lookup, and administrative tasks.',
+          'Important: The AI assistant is a supplementary tool only. It does not provide medical diagnoses, and its outputs should never be used as the sole basis for any clinical decision. A disclaimer is displayed within the relevant app at all times reminding users not to rely on AI suggestions without professional medical judgment.',
+          'Nabd Health, its developers, and affiliated parties bear no responsibility for any clinical decisions made based on AI-generated content, nor for any patient harm, injury, or death resulting from such decisions.',
+        ],
+      },
+      {
+        title: 'Medical Liability Disclaimer',
+        paragraphs: [
+          'Nabd Health products are digital management tools, not medical devices or clinical authorities. We are not responsible for:',
+          'All medical and professional responsibility remains solely with the licensed healthcare professional providing care or service:',
+        ],
+        bullets: [
+          'Any medical decisions made by doctors, pharmacists, or staff using our applications.',
+          'Patient outcomes, including injury or death, resulting from treatment or dispensing decisions.',
+          'Errors in data entry made by clinic or pharmacy staff.',
+          'Misuse of the platform by any authorized or unauthorized party.',
+        ],
+      },
+      {
+        title: 'Data Security',
+        paragraphs: [
+          'We implement industry-standard security measures to protect your data, including encrypted storage and secure authentication across all Nabd Health products. However, no system is completely immune to breaches. In the event of a data breach affecting your information, we will notify affected users in accordance with applicable law.',
+        ],
+      },
+      {
+        title: 'Data Retention',
+        paragraphs: [
+          'Data is retained for as long as your account is active or as required by applicable healthcare regulations in your jurisdiction. You may request deletion of your data by contacting our support team.',
+        ],
+      },
+      {
+        title: 'Third-Party Services',
+        paragraphs: [
+          'Nabd Health products may integrate with third-party services such as WhatsApp for OTP delivery. These services are governed by their own privacy policies, and we encourage you to review them independently. Nabd Health is not responsible for the data practices of third-party providers.',
+        ],
+      },
+      {
+        title: "Children's Data",
+        paragraphs: [
+          'Nabd Health products are intended for use by licensed healthcare professionals and authorized staff only. We do not knowingly collect personal data from individuals under the age of 18 outside of patient or customer records entered by authorized medical staff.',
+        ],
+      },
+      {
+        title: 'Future Applications',
+        paragraphs: [
+          'As Nabd Health grows and new applications are added to the platform, this Privacy Policy will be updated to reflect any new data practices introduced by those products. Users will be notified of significant updates through our website and in-app notifications.',
+        ],
+      },
+      {
+        title: 'Changes to This Policy',
+        paragraphs: [
+          'We reserve the right to update this Privacy Policy at any time. Continued use of any Nabd Health product or website after changes constitutes acceptance of the updated policy.',
+        ],
+      },
+      {
+        title: 'Contact Us',
+        paragraphs: [
+          'For privacy-related inquiries, contact us at:',
+          'Email: support@nabdhealth.com',
+          'Website: www.nabdhealth.com',
+        ],
+      },
+    ],
+  },
+  terms: {
+    badge: 'Terms of Service',
+    headline: 'Terms of Service — Nabd Health',
+    effectiveDate: 'Effective Date: May 28, 2025',
+    lastUpdated: 'Last Updated: May 28, 2025',
+    sections: [
+      {
+        title: 'Introduction and Acceptance of Terms',
+        paragraphs: [
+          'These Terms of Service govern your use of the Nabd Health website and all applications and services operated under the Nabd Health platform, including:',
+          'By accessing our website or using any Nabd Health product, you agree to be bound by these Terms. If you do not agree, you must discontinue use immediately.',
+        ],
+        bullets: [
+          'Nabd Clinic — clinic management for healthcare professionals.',
+          'Nabd Pharmacy — pharmacy management (coming soon).',
+          'Any additional applications introduced by Nabd Health in the future.',
+        ],
+      },
+      {
+        title: 'The Nabd Health Platform',
+        paragraphs: [
+          'Nabd Health is the parent platform under which multiple healthcare management applications are developed and operated. Each application may have its own supplementary terms or in-app policies, but these Terms of Service apply universally across all Nabd Health products and the Nabd Health website.',
+        ],
+      },
+      {
+        title: 'Eligibility',
+        paragraphs: [
+          'Nabd Health products are intended for use by:',
+          'Use of our products by unlicensed individuals for clinical or pharmaceutical purposes is strictly prohibited.',
+        ],
+        bullets: [
+          'Licensed medical and healthcare professionals.',
+          'Clinic owners, administrators, and managers.',
+          'Pharmacists and pharmacy staff (for Nabd Pharmacy).',
+          'Authorized staff members onboarded through verified processes such as WhatsApp OTP.',
+        ],
+      },
+      {
+        title: 'License to Use',
+        paragraphs: [
+          'We grant you a limited, non-exclusive, non-transferable, revocable license to use Nabd Health products for your professional healthcare management purposes in accordance with these Terms.',
+        ],
+      },
+      {
+        title: 'Prohibited Uses',
+        paragraphs: [
+          'You agree not to:',
+        ],
+        bullets: [
+          'Copy, reverse-engineer, decompile, or disassemble any part of any Nabd Health product or website.',
+          'Use any Nabd Health product for unlawful purposes.',
+          'Share your account credentials with unauthorized individuals.',
+          'Attempt to breach or circumvent any security measures within any Nabd Health product.',
+          'Use the platform to store or transmit malicious code.',
+          'Misrepresent your identity or professional credentials.',
+        ],
+      },
+      {
+        title: 'Strict Prohibition on Competitive Data Transfer',
+        paragraphs: [
+          'This clause is critical and legally binding across all Nabd Health products.',
+          'You are strictly prohibited from:',
+          'Violation of this clause will result in:',
+          'Nabd Health actively monitors for anomalous data access patterns and reserves the right to pursue legal action without prior warning upon detection of any violation.',
+        ],
+        bullets: [
+          'Sharing, transferring, exporting, or disclosing any data, features, workflows, system structures, UI/UX designs, proprietary logic, or business methodologies from any Nabd Health product to any competing product, company, developer, or third party.',
+          'Using your access to any Nabd Health product to assist, consult for, or contribute to the development of any competing healthcare management software or platform.',
+          'Extracting patient, pharmacy, clinic, or operational data from the platform for any purpose other than your own direct professional use.',
+          'Immediate and permanent termination of your account across all Nabd Health products, with no refund.',
+          'Civil legal action for damages, including but not limited to loss of business, intellectual property theft, and unfair competition.',
+          'Criminal referral where applicable under cybercrime and data protection laws of your jurisdiction.',
+          'Injunctive relief sought by Nabd Health to prevent further misuse.',
+        ],
+      },
+      {
+        title: 'Multi-Application Use',
+        paragraphs: [
+          'If you use more than one Nabd Health application, these Terms apply to your use of all products collectively. Each product may also carry supplementary in-app terms that you are required to accept upon use.',
+        ],
+      },
+      {
+        title: 'Staff and Multi-Clinic / Multi-Branch Management',
+        paragraphs: [
+          'Account owners are fully responsible for all actions taken by staff accounts they create or authorize, including receptionists or staff added via WhatsApp OTP or any other onboarding method. It is the account owner\'s responsibility to revoke staff access promptly when employment or authorization ends.',
+        ],
+      },
+      {
+        title: 'AI Assistant — Terms of Use',
+        paragraphs: [
+          'AI-powered features within Nabd Health products are provided as informational and administrative aids only.',
+          'By using any AI feature within a Nabd Health product, you acknowledge and accept these limitations in full.',
+        ],
+        bullets: [
+          'AI tools within our products are not licensed medical or pharmaceutical professionals.',
+          'AI-generated suggestions must not be treated as medical, clinical, or pharmaceutical advice.',
+          'A permanent in-app notice is displayed in all relevant products reminding users of this limitation.',
+          'Nabd Health holds no liability for any decisions made using AI-generated content.',
+        ],
+      },
+      {
+        title: 'Medical and Professional Liability',
+        paragraphs: [
+          'Nabd Health provides tools to assist with healthcare administration. We do not practice medicine, pharmacy, or any regulated healthcare profession, and we are not liable for:',
+          'All clinical, medical, and professional responsibility remains solely with the treating or supervising licensed professional.',
+        ],
+        bullets: [
+          'Any clinical or professional decisions made through or influenced by use of our products.',
+          'Patient harm, injury, or death.',
+          'Incorrect prescriptions, treatment plans, or medication dispensing records entered into the system.',
+          'Any consequences arising from incorrect data entry by clinic or pharmacy staff.',
+        ],
+      },
+      {
+        title: 'Invoices and Financial Records',
+        paragraphs: [
+          'Nabd Health products generate invoices and financial summaries as a convenience feature. These should always be reviewed by the responsible party for accuracy. We are not responsible for billing errors, tax miscalculations, or disputes arising from generated records.',
+        ],
+      },
+      {
+        title: 'Website Use',
+        paragraphs: [
+          'The Nabd Health website is provided for informational purposes regarding our products and platform. We reserve the right to modify, suspend, or discontinue any part of the website at any time without notice.',
+        ],
+      },
+      {
+        title: 'Subscription and Payments',
+        paragraphs: [
+          'Pricing, subscription plans, and billing details are provided at the time of registration for each product. Nabd Health reserves the right to modify pricing across any of its products with reasonable advance notice. Continued use after a price change constitutes acceptance of the new pricing.',
+        ],
+      },
+      {
+        title: 'Termination',
+        paragraphs: [
+          'We reserve the right to suspend or terminate your account across any or all Nabd Health products at any time if:',
+          'Upon termination, your access to data within the affected product(s) may be restricted. Data retrieval requests must be submitted within 30 days of termination.',
+        ],
+        bullets: [
+          'You violate any of these Terms.',
+          'We detect fraudulent, abusive, or harmful activity.',
+          'You engage in any competitive data misuse as described in Section 6.',
+        ],
+      },
+      {
+        title: 'Limitation of Liability',
+        paragraphs: [
+          'To the fullest extent permitted by law, Nabd Health and its developers shall not be liable for any indirect, incidental, special, or consequential damages arising out of your use of any Nabd Health product or website, including but not limited to loss of data, loss of revenue, or patient harm.',
+        ],
+      },
+      {
+        title: 'Governing Law',
+        paragraphs: [
+          'These Terms are governed by the laws of the Arab Republic of Egypt. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the competent courts in Egypt.',
+        ],
+      },
+      {
+        title: 'Amendments',
+        paragraphs: [
+          'We may update these Terms at any time. Continued use of any Nabd Health product or website after updates constitutes your acceptance of the revised Terms. Major updates will be communicated via in-app notification and/or the Nabd Health website.',
+        ],
+      },
+      {
+        title: 'Contact Us',
+        paragraphs: [
+          'For any questions regarding these Terms, contact us at:',
+          'Email: support@nabdhealth.com',
+          'Website: www.nabdhealth.com',
+          'Nabd Health — Redefining Healthcare Management.',
+        ],
+      },
+    ],
   },
   common: {
     learnMore: 'Learn More',

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import { Link as RouterLink } from 'react-router-dom'
+import { ROUTES } from '../../constants/routes'
 import { Box, Flex, Grid, Text, VStack } from '@chakra-ui/react'
 import { X, CheckCircle, AlertCircle } from 'lucide-react'
 import { AppButton } from '../UI/AppButton/AppButton'
@@ -29,6 +31,7 @@ const EMPTY_FORM: RequestAccessFormData = {
   clinicStreet: '',
   location: null,
   details: '',
+  agreedToTerms: false,
 }
 
 export function RequestAccessModal({ isOpen, onClose }: RequestAccessProps) {
@@ -88,6 +91,7 @@ export function RequestAccessModal({ isOpen, onClose }: RequestAccessProps) {
   const messages = {
     phoneInvalid: t.requestAccess.form.phoneInvalid,
     locationRequired: t.requestAccess.form.locationRequired,
+    privacyRequired: t.requestAccess.form.privacyRequired,
   }
 
   const handleSubmit = async () => {
@@ -328,14 +332,50 @@ export function RequestAccessModal({ isOpen, onClose }: RequestAccessProps) {
               type="button"
             />
 
-            <Text
-              fontSize={REQUEST_ACCESS_TOKENS.privacyFontSize}
-              color={REQUEST_ACCESS_TOKENS.privacyColor}
-              textAlign="center"
-              lineHeight="1.6"
-            >
-              {t.requestAccess.form.privacy}
-            </Text>
+            <Box>
+              <Flex align="start" gap="3">
+                <Box mt="1" flexShrink={0}>
+                  <input
+                    type="checkbox"
+                    id="ra-agreed"
+                    checked={form.agreedToTerms}
+                    onChange={(e) => setField('agreedToTerms')(e.target.checked)}
+                    style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--chakra-colors-teal-500)' }}
+                  />
+                </Box>
+                <Text
+                  as="label"
+                  htmlFor="ra-agreed"
+                  fontSize={REQUEST_ACCESS_TOKENS.privacyFontSize}
+                  color={REQUEST_ACCESS_TOKENS.privacyColor}
+                  lineHeight="1.6"
+                  cursor="pointer"
+                >
+                  {t.requestAccess.form.privacyPrefix}
+                  <RouterLink 
+                    to={ROUTES.PRIVACY} 
+                    style={{ color: 'var(--chakra-colors-teal-600)', fontWeight: '500', textDecoration: 'underline' }}
+                    onClick={(e) => { e.stopPropagation(); onClose(); }}
+                  >
+                    {t.requestAccess.form.privacyLink}
+                  </RouterLink>
+                  {t.requestAccess.form.privacyAnd}
+                  <RouterLink 
+                    to={ROUTES.TERMS} 
+                    style={{ color: 'var(--chakra-colors-teal-600)', fontWeight: '500', textDecoration: 'underline' }}
+                    onClick={(e) => { e.stopPropagation(); onClose(); }}
+                  >
+                    {t.requestAccess.form.termsLink}
+                  </RouterLink>
+                  {t.requestAccess.form.privacySuffix}
+                </Text>
+              </Flex>
+              {errors.agreedToTerms && (
+                <Text fontSize="13px" color="red.500" mt="1.5">
+                  {errors.agreedToTerms}
+                </Text>
+              )}
+            </Box>
           </VStack>
         )}
       </Box>

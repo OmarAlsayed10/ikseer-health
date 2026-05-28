@@ -11,6 +11,7 @@ export interface RequestAccessFormData {
   clinicStreet: string
   location: LocationValue | null
   details: string
+  agreedToTerms: boolean
 }
 
 export interface RequestAccessProps {

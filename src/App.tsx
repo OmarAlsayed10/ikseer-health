@@ -9,6 +9,8 @@ import { PricingPage } from './pages/PricingPage'
 import { AboutPage } from './pages/AboutPage'
 import { SupportPage } from './pages/SupportPage'
 import { ContactPage } from './pages/ContactPage'
+import { PrivacyPage } from './pages/PrivacyPage'
+import { TermsPage } from './pages/TermsPage'
 import { ROUTES } from './constants/routes'
 
 function ScrollToTop() {
@@ -36,6 +38,8 @@ function AppShell() {
         <Route path={ROUTES.ABOUT} element={<AboutPage onRequestAccess={openModal} />} />
         <Route path={ROUTES.SUPPORT} element={<SupportPage onRequestAccess={openModal} />} />
         <Route path={ROUTES.CONTACT} element={<ContactPage onRequestAccess={openModal} />} />
+        <Route path={ROUTES.PRIVACY} element={<PrivacyPage />} />
+        <Route path={ROUTES.TERMS} element={<TermsPage />} />
         <Route path="*" element={<Home onRequestAccess={openModal} onContactSales={openModal} />} />
       </Routes>
 

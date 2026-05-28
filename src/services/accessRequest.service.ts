@@ -42,15 +42,18 @@ export interface AccessRequestValidationErrors {
   clinicCity?: string
   clinicStreet?: string
   location?: string
+  agreedToTerms?: string
 }
 
 export function validateAccessRequest(
   data: Omit<AccessRequestPayload, 'countryCode' | 'location'> & {
     location: AccessRequestLocation | null
+    agreedToTerms: boolean
   },
   messages: {
     phoneInvalid: string
     locationRequired: string
+    privacyRequired: string
   },
 ): { errors: AccessRequestValidationErrors; isValid: boolean } {
   const country = findCountry(data.countryIso2)
@@ -87,6 +90,7 @@ export function validateAccessRequest(
     errors.clinicCountryIso2 = messages.locationRequired
   }
   if (!data.location) errors.location = messages.locationRequired
+  if (!data.agreedToTerms) errors.agreedToTerms = messages.privacyRequired
 
   return { errors, isValid: Object.keys(errors).length === 0 }
 }
