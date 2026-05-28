@@ -68,7 +68,7 @@ export function buildAdminEmail(data: AccessRequestValid, approveUrl: string): B
     <table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.5">${buildInfoTable(data)}</table>
     <div style="margin-top:24px;text-align:center">
       <a href="${approveUrl}" style="display:inline-block;padding:12px 24px;background:#0A7A8C;color:white;text-decoration:none;border-radius:8px;font-weight:600">Approve &amp; Send Installer</a>
-      <p style="margin:12px 0 0;color:#6b7280;font-size:12px">Clicking this will email the doctor the installer download link. Link expires in 14 days.</p>
+      <p style="margin:12px 0 0;color:#6b7280;font-size:12px">Clicking this will email the doctor the installer download link. Link expires in 48 hours.</p>
     </div>
   `
   const html = shell('New Access Request', 'Nabd — request submitted via the website', body)

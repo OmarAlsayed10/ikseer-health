@@ -20,7 +20,7 @@ export const CONFIG = {
     email: 'nabdhealtheg@gmail.com',
   },
   trial: {
-    days: 14,
+    days: 7,
     linkExpiryHours: 48,
   },
 } as const
