@@ -1,0 +1,15 @@
+export const NAVBAR_TOKENS = {
+  height: '68px',
+  zIndex: 1000,
+  bg: 'white',
+  scrolledBg: 'rgba(255,255,255,0.92)',
+  scrolledBlur: 'blur(12px)',
+  borderColor: 'gray.100',
+  logoHeight: '100px',
+  linkFontSize: '14px',
+  linkFontWeight: '500',
+  linkHoverBg: 'teal.50',
+  linkHoverColor: 'teal.700',
+  activeLinkColor: 'teal.700',
+  activeLinkBg: 'teal.50',
+} as const

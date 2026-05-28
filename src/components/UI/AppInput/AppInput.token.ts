@@ -1,0 +1,15 @@
+export const INPUT_TOKENS = {
+  borderRadius: 'lg',
+  height: '48px',
+  fontSize: '15px',
+  borderColor: 'gray.200',
+  focusBorderColor: 'teal.500',
+  errorBorderColor: 'red.400',
+  bg: 'white',
+  labelColor: 'gray.700',
+  labelFontSize: '14px',
+  labelFontWeight: '500',
+  errorFontSize: '13px',
+  helperFontSize: '13px',
+  helperColor: 'gray.500',
+} as const
