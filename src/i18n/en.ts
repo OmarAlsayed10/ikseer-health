@@ -36,8 +36,6 @@ export const en = {
   features: {
     badge: 'Platform Features',
     headline: 'Built for How Clinics Actually Work',
-    subheadline:
-      'Every feature was designed from real clinical workflows, not software assumptions.',
     lockedLabel: 'Available in Professional & Enterprise',
     cta: 'See All Features',
     items: {
