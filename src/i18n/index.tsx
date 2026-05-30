@@ -12,7 +12,7 @@ interface I18nContextValue {
 
 const I18nContext = createContext<I18nContextValue | null>(null)
 
-const STORAGE_KEY = 'nabd_lang'
+const STORAGE_KEY = 'ikseer_lang'
 
 function resolveInitialLang(): Language {
   const stored = localStorage.getItem(STORAGE_KEY)

@@ -34,7 +34,7 @@ export function Footer({ onRequestAccess }: FooterProps) {
           py="16"
         >
           <VStack align="start" gap="4">
-            <Img src={MEDIA.logo} alt="Nabd Clinic" h={FOOTER_TOKENS.logoHeight} />
+            <Img src={MEDIA.logo} alt="Ikseer Clinic" h={FOOTER_TOKENS.logoHeight} />
             <Text fontSize={FOOTER_TOKENS.fontSize} lineHeight="1.6" maxW="260px">
               {t.footer.tagline}
             </Text>

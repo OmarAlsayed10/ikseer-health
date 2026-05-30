@@ -54,8 +54,8 @@ export function Navbar({ onRequestAccess }: NavbarProps) {
     >
       <Box maxW="1200px" mx="auto" px={{ base: '20px', md: '40px', lg: '60px' }}>
         <Flex h={NAVBAR_TOKENS.height} align="center" justify="space-between">
-          <NavLink to={ROUTES.HOME} aria-label="Nabd Clinic Home" textDecoration="none">
-            <Img src={MEDIA.logo} alt="Nabd Clinic" h={NAVBAR_TOKENS.logoHeight} />
+          <NavLink to={ROUTES.HOME} aria-label="Ikseer Clinic Home" textDecoration="none">
+            <Img src={MEDIA.logo} alt="Ikseer Clinic" h={NAVBAR_TOKENS.logoHeight} />
           </NavLink>
 
           <HStack gap="0" display={{ base: 'none', lg: 'flex' }}>

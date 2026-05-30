@@ -5,7 +5,7 @@ export const NAVBAR_TOKENS = {
   scrolledBg: 'rgba(255,255,255,0.92)',
   scrolledBlur: 'blur(12px)',
   borderColor: 'gray.100',
-  logoHeight: '100px',
+  logoHeight: '50px',
   linkFontSize: '14px',
   linkFontWeight: '500',
   linkHoverBg: 'teal.50',
