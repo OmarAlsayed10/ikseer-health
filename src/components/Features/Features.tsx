@@ -8,6 +8,8 @@ import {
   BarChart2,
   Shield,
   Lock,
+  MessageCircle,
+  Sparkles,
 } from 'lucide-react'
 import { SectionWrapper } from '../UI/SectionWrapper/SectionWrapper'
 import { AppBadge } from '../UI/AppBadge/AppBadge'
@@ -63,6 +65,22 @@ export function Features({ onRequestAccess, showAll = false, hideIntro = false }
       icon: <Shield size={20} />,
       videoSrc: MEDIA.features.staff.video,
       thumbnailSrc: MEDIA.features.staff.thumbnail,
+    },
+    {
+      key: 'whatsapp',
+      title: t.features.items.whatsapp.title,
+      description: t.features.items.whatsapp.description,
+      icon: <MessageCircle size={20} />,
+      videoSrc: MEDIA.features.whatsapp.video,
+      thumbnailSrc: MEDIA.features.whatsapp.thumbnail,
+    },
+    {
+      key: 'ai',
+      title: t.features.items.ai.title,
+      description: t.features.items.ai.description,
+      icon: <Sparkles size={20} />,
+      videoSrc: MEDIA.features.ai.video,
+      thumbnailSrc: MEDIA.features.ai.thumbnail,
     },
   ]
 

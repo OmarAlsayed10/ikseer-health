@@ -26,23 +26,31 @@ export const MEDIA = {
   features: {
     patients: {
       video: vid('ikseer/feature-patients'),
-      thumbnail: img('ikseer/feature-patients-thumb'),
+      thumbnail: img('patients_kkkdf4'),
     },
     scheduling: {
       video: vid('ikseer/feature-scheduling'),
-      thumbnail: img('ikseer/feature-scheduling-thumb'),
+      thumbnail: img('scheduling_cxrw9w'),
     },
     billing: {
       video: vid('ikseer/feature-billing'),
-      thumbnail: img('ikseer/feature-billing-thumb'),
+      thumbnail: img('billing_ngkud9'),
     },
     reports: {
       video: vid('ikseer/feature-reports'),
-      thumbnail: img('ikseer/feature-reports-thumb'),
+      thumbnail: img('reports_lnagam'),
     },
     staff: {
       video: vid('ikseer/feature-staff'),
-      thumbnail: img('ikseer/feature-staff-thumb'),
+      thumbnail: img('staff_a0rdbd'),
+    },
+    whatsapp: {
+      video: vid('ikseer/feature-whatsapp'),
+      thumbnail: img('whatsapp_pt2sk1'),
+    },
+    ai: {
+      video: vid('ikseer/feature-ai'),
+      thumbnail: img('ai_ehahmb'),
     },
   },
 

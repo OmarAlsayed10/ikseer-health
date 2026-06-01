@@ -64,6 +64,16 @@
         description:
           'Define roles, manage permissions, and keep your team organized under one system.',
       },
+      whatsapp: {
+        title: 'WhatsApp Messaging',
+        description:
+          'Send appointment reminders, test results, and custom messages to patients directly via WhatsApp — with AI-assisted drafting in Arabic or English.',
+      },
+      ai: {
+        title: 'AI Clinical Assistant',
+        description:
+          'An on-demand AI helper built into the app. Look up drug interactions, draft patient instructions, and get clinical suggestions — right where you work.',
+      },
     },
     locked: {
       title: 'More in Professional & Enterprise',
