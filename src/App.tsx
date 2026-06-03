@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { Navbar } from './components/Navbar/Navbar'
 import { Footer } from './components/Footer/Footer'
 import { RequestAccessModal } from './components/RequestAccess/RequestAccess'
+import { WhatsAppButton } from './components/WhatsAppButton/WhatsAppButton'
 import { Home } from './pages/Home'
 import { FeaturesPage } from './pages/FeaturesPage'
 import { PricingPage } from './pages/PricingPage'
@@ -45,6 +46,7 @@ function AppShell() {
 
       <Footer onRequestAccess={openModal} />
       <RequestAccessModal isOpen={isModalOpen} onClose={closeModal} />
+      <WhatsAppButton />
     </>
   )
 }

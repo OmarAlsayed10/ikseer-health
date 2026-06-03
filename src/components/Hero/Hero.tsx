@@ -91,26 +91,42 @@ export function Hero({ onRequestAccess, onWatchDemo }: HeroProps) {
             </HStack>
 
             <HStack
-              mt="12"
-              gap="8"
+              mt="6"
+              gap="2"
               className="animate-fade-up animate-delay-4"
               flexWrap="wrap"
+              align="baseline"
             >
-              {[
-                { value: '50+', label: t.hero.stats.clinics },
-                { value: '10K+', label: t.hero.stats.appointments },
-                { value: '99.9%', label: t.hero.stats.uptime },
-              ].map((stat) => (
-                <VStack key={stat.label} align="start" gap="0">
-                  <Text fontSize="1.75rem" fontWeight="700" color="teal.700" lineHeight="1">
-                    {stat.value}
-                  </Text>
-                  <Text fontSize="13px" color="gray.500" mt="1">
-                    {stat.label}
-                  </Text>
-                </VStack>
-              ))}
+              <Text fontSize="13px" color="gray.500">
+                {t.hero.priceHook.prefix}
+              </Text>
+              <Text fontSize="1.25rem" fontWeight="700" color="teal.700" lineHeight="1">
+                {t.hero.priceHook.amount}
+              </Text>
+              <Text fontSize="13px" color="gray.500">
+                {t.hero.priceHook.suffix}
+              </Text>
             </HStack>
+
+            {/*
+              Stats hidden until we have real numbers to publish.
+              <HStack mt="12" gap="8" className="animate-fade-up animate-delay-4" flexWrap="wrap">
+                {[
+                  { value: '2+', label: t.hero.stats.clinics },
+                  { value: '100+', label: t.hero.stats.appointments },
+                  { value: '99.9%', label: t.hero.stats.uptime },
+                ].map((stat) => (
+                  <VStack key={stat.label} align="start" gap="0">
+                    <Text fontSize="1.75rem" fontWeight="700" color="teal.700" lineHeight="1">
+                      {stat.value}
+                    </Text>
+                    <Text fontSize="13px" color="gray.500" mt="1">
+                      {stat.label}
+                    </Text>
+                  </VStack>
+                ))}
+              </HStack>
+            */}
           </Box>
 
           <Box

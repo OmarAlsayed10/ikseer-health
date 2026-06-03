@@ -17,11 +17,20 @@ export const ar: Translations = {
       'Ikseer Health مجموعة متنامية من الأدوات المصممة لمقدمي الرعاية الصحية. ابدأ بـ Ikseer Clinic — نظام إدارة العيادات الشامل — وتوسّع مع منتجاتنا القادمة.',
     primaryCta: 'طلب الوصول',
     secondaryCta: 'شاهد كيف يعمل',
+    priceHook: {
+      prefix: 'تبدأ من',
+      amount: '٧٠٠ جنيه',
+      suffix: '/ شهرياً',
+    },
     stats: {
       clinics: 'عيادة مُخدومة',
       appointments: 'موعد مُدار',
       uptime: 'وقت تشغيل',
     },
+  },
+  whatsapp: {
+    label: 'تواصل معنا',
+    ariaLabel: 'تواصل معنا عبر واتساب',
   },
   videoDemo: {
     badge: 'Ikseer Clinic — عرض',

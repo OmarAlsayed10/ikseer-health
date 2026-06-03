@@ -15,11 +15,20 @@
       'Ikseer Health is a growing suite of tools built for healthcare providers. Start with Ikseer Clinic — our comprehensive clinic management system — and access more products as we expand.',
     primaryCta: 'Request Access',
     secondaryCta: 'Watch Demo',
+    priceHook: {
+      prefix: 'Starting from',
+      amount: '700 EGP',
+      suffix: '/ month',
+    },
     stats: {
       clinics: 'Clinics Served',
       appointments: 'Appointments Managed',
       uptime: 'Uptime',
     },
+  },
+  whatsapp: {
+    label: 'Chat with us',
+    ariaLabel: 'Chat with us on WhatsApp',
   },
   videoDemo: {
     badge: 'Ikseer Clinic — Demo',
