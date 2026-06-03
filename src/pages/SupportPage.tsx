@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react'
 import { Support } from '../components/Support/Support'
-import { Contact } from '../components/Contact/Contact'
 import { PageHeader } from '../components/UI/PageHeader/PageHeader'
 import { useTranslation } from '../hooks/useTranslation'
 
@@ -20,7 +19,6 @@ export function SupportPage({ onRequestAccess }: SupportPageProps) {
         subheadline={t.support.subheadline}
       />
       <Support onRequestAccess={onRequestAccess} />
-      <Contact />
     </Box>
   )
 }

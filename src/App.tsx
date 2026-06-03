@@ -38,7 +38,7 @@ function AppShell() {
         <Route path={ROUTES.PRICING} element={<PricingPage onRequestAccess={openModal} onContactSales={openModal} />} />
         <Route path={ROUTES.ABOUT} element={<AboutPage onRequestAccess={openModal} />} />
         <Route path={ROUTES.SUPPORT} element={<SupportPage onRequestAccess={openModal} />} />
-        <Route path={ROUTES.CONTACT} element={<ContactPage onRequestAccess={openModal} />} />
+        <Route path={ROUTES.CONTACT} element={<ContactPage />} />
         <Route path={ROUTES.PRIVACY} element={<PrivacyPage />} />
         <Route path={ROUTES.TERMS} element={<TermsPage />} />
         <Route path="*" element={<Home onRequestAccess={openModal} onContactSales={openModal} />} />

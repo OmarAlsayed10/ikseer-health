@@ -1,14 +1,9 @@
 import { Box } from '@chakra-ui/react'
 import { Contact } from '../components/Contact/Contact'
-import { Support } from '../components/Support/Support'
 import { PageHeader } from '../components/UI/PageHeader/PageHeader'
 import { useTranslation } from '../hooks/useTranslation'
 
-interface ContactPageProps {
-  onRequestAccess: () => void
-}
-
-export function ContactPage({ onRequestAccess }: ContactPageProps) {
+export function ContactPage() {
   const { t } = useTranslation()
 
   return (
@@ -20,7 +15,6 @@ export function ContactPage({ onRequestAccess }: ContactPageProps) {
         subheadline={t.contact.subheadline}
       />
       <Contact />
-      <Support onRequestAccess={onRequestAccess} />
     </Box>
   )
 }
