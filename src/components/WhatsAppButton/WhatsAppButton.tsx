@@ -1,6 +1,8 @@
-import { Box, HStack, Text } from '@chakra-ui/react'
+import { HStack, Text, chakra } from '@chakra-ui/react'
 import { useTranslation } from '../../hooks/useTranslation'
 import { CONFIG } from '../../constants/config'
+
+const Anchor = chakra('a')
 
 const WHATSAPP_GREEN = '#25D366'
 const WHATSAPP_GREEN_HOVER = '#1DA851'
@@ -12,8 +14,7 @@ export function WhatsAppButton() {
   const href = `https://wa.me/${CONFIG.contact.whatsapp}`
 
   return (
-    <Box
-      as="a"
+    <Anchor
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -53,7 +54,7 @@ export function WhatsAppButton() {
           {t.whatsapp.label}
         </Text>
       </HStack>
-    </Box>
+    </Anchor>
   )
 }
 
