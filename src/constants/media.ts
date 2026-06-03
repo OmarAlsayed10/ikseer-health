@@ -1,5 +1,6 @@
 ﻿import { CONFIG } from './config'
 import logoUrl from '../assets/logo.png'
+import logoWhiteUrl from '../assets/logoWhite.png'
 
 const { cloudName } = CONFIG.cloudinary
 
@@ -11,6 +12,7 @@ const vid = (publicId: string, transform = 'q_auto') =>
 
 export const MEDIA = {
   logo: logoUrl,
+  logoWhite: logoWhiteUrl,
 
   hero: {
     mockup: img('ikseer/hero-mockup', 'q_auto,f_auto,w_1200'),
