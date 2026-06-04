@@ -20,7 +20,7 @@ export const MEDIA = {
   },
 
   demos: {
-    overview: vid('ikseer/demo-overview'),
+    overview: 'https://res.cloudinary.com/dr85phcjz/video/upload/q_auto/f_auto/v1780605560/0604_2_1_rewceo.mp4',
     appointment: vid('ikseer/demo-appointment'),
     billing: vid('ikseer/demo-billing'),
   },
