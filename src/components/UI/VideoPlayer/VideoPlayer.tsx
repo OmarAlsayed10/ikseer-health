@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Box, AspectRatio } from '@chakra-ui/react'
 import { Play, Pause } from 'lucide-react'
 import { VIDEO_TOKENS } from './VideoPlayer.token'
@@ -16,6 +16,12 @@ export function VideoPlayer({
   const [showOverlay, setShowOverlay] = useState(!autoPlay)
   const videoRef = useRef<HTMLVideoElement>(null)
 
+  useEffect(() => {
+    if (autoPlay && videoRef.current) {
+      videoRef.current.play().catch(() => {})
+    }
+  }, [autoPlay])
+
   const toggle = () => {
     const video = videoRef.current
     if (!video) return
@@ -28,6 +34,31 @@ export function VideoPlayer({
       setIsPlaying(false)
       setShowOverlay(true)
     }
+  }
+
+  if (autoPlay) {
+    return (
+      <Box
+        borderRadius={VIDEO_TOKENS.borderRadius}
+        overflow="hidden"
+        shadow={VIDEO_TOKENS.shadow}
+        position="relative"
+        pointerEvents="none"
+      >
+        <AspectRatio ratio={aspectRatio === '16/9' ? 16 / 9 : aspectRatio === '4/3' ? 4 / 3 : 1}>
+          <video
+            ref={videoRef}
+            src={src}
+            muted
+            playsInline
+            loop
+            autoPlay
+            title={title}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </AspectRatio>
+      </Box>
+    )
   }
 
   return (

@@ -18,7 +18,7 @@
   },
   contact: {
     email: 'ikseerhealth@gmail.com',
-    whatsapp: '+20 1552731225',
+    whatsapp: '+201552731225',
   },
   trial: {
     days: 7,
