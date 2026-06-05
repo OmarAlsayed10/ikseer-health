@@ -5,7 +5,7 @@ import { buildAdminEmail, buildDoctorAckEmail } from './_lib/email'
 import { signApprovalToken } from './_lib/approval-token'
 import { sendEmail, fromAddress } from './_lib/resend'
 
-const TO_EMAIL = 'nabdhealtheg@gmail.com'
+const TO_EMAIL = process.env.ACCESS_REQUEST_TO_EMAIL
 
 function getClientIp(req: VercelRequest): string {
   const fwd = req.headers['x-forwarded-for']

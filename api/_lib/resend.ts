@@ -2,7 +2,7 @@ import { Resend } from 'resend'
 
 export interface EmailMessage {
   from: string
-  to: string
+  to: any
   replyTo?: string
   subject: string
   html: string
