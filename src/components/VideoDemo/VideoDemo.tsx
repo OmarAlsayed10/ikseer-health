@@ -48,8 +48,8 @@ export function VideoDemo({ onRequestAccess: _ }: VideoDemoProps) {
         <Box maxW="900px" w="full" mx="auto" mt="8" className="animate-fade-up animate-delay-3">
           <VideoPlayer
             src={overview.src}
-            thumbnail={overview.thumbnail}
             title={overview.label}
+            autoPlay
           />
         </Box>
       </Box>
