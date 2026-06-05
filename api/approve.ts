@@ -50,7 +50,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   let from: string
   try {
-    from = fromAddress('Nabd')
+    from = fromAddress('Ikseer')
   } catch (err) {
     console.error('[approve] config error:', err)
     res.setHeader('Content-Type', 'text/html; charset=utf-8')

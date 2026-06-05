@@ -40,7 +40,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   let from: string
   try {
-    from = fromAddress('Nabd')
+    from = fromAddress('Ikseer')
   } catch (err) {
     console.error('[access-request] RESEND_FROM_EMAIL not set:', err)
     return res.status(500).json({ message: 'Email service not configured (missing RESEND_FROM_EMAIL).' })
@@ -65,8 +65,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ message: 'Approval system not configured (missing APPROVAL_SECRET).' })
   }
 
-  const adminEmail = buildAdminEmail(validation.value, approveUrl, rejectUrl)
-  const doctorEmail = buildDoctorAckEmail(validation.value)
+  const adminEmail = buildAdminEmail(validation.value, approveUrl, rejectUrl, siteUrl)
+  const doctorEmail = buildDoctorAckEmail(validation.value, siteUrl)
 
   try {
     await Promise.all([

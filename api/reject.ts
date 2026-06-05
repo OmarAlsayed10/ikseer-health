@@ -50,17 +50,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   let from: string
   try {
-    from = fromAddress('Nabd')
+    from = fromAddress('Ikseer')
   } catch (err) {
     console.error('[reject] config error:', err)
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
     return res.status(500).send(htmlPage('Not configured', '<p>RESEND_FROM_EMAIL env var not set.</p>', '#b91c1c'))
   }
 
+  const siteUrl = (process.env.PUBLIC_SITE_URL ?? '').replace(/\/$/, '')
   const email = buildDoctorRejectedEmail({
     fullName: payload.fullName,
     clinicName: payload.clinicName,
-  })
+  }, siteUrl)
 
   try {
     await sendEmail({

@@ -49,11 +49,15 @@ function plainTextOf(data: AccessRequestValid): string {
     .join('\n')
 }
 
-function shell(headerTitle: string, headerSub: string, body: string): string {
+function shell(headerTitle: string, headerSub: string, body: string, logoUrl?: string): string {
+  const avatar = logoUrl
+    ? `<img src="${logoUrl}" alt="Ikseer" width="56" height="56" style="display:block;width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.4);margin:0 auto 14px">`
+    : ''
   return `<!doctype html>
 <html><body style="margin:0;padding:24px;background:#f3f4f6;font-family:-apple-system,Segoe UI,Roboto,sans-serif">
   <div style="max-width:640px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb">
-    <div style="padding:24px;background:linear-gradient(135deg,#1ECFE0,#0A7A8C);color:white">
+    <div style="padding:24px;background:linear-gradient(135deg,#1ECFE0,#0A7A8C);color:white;text-align:center">
+      ${avatar}
       <h1 style="margin:0;font-size:20px">${headerTitle}</h1>
       <p style="margin:6px 0 0;opacity:0.9;font-size:14px">${headerSub}</p>
     </div>
@@ -66,6 +70,7 @@ export function buildAdminEmail(
   data: AccessRequestValid,
   approveUrl: string,
   rejectUrl: string,
+  siteUrl = '',
 ): BuiltEmail {
   const subject = `New access request — ${data.fullName} (${data.clinicName})`
   const body = `
@@ -76,39 +81,43 @@ export function buildAdminEmail(
       <p style="margin:12px 0 0;color:#6b7280;font-size:12px">Approving emails the doctor that their request has been approved and that customer support will contact them on WhatsApp. Rejecting emails the doctor that their request was not approved and that customer support will contact them with the reason. Links expire in 14 days.</p>
     </div>
   `
-  const html = shell('New Access Request', 'Nabd — request submitted via the website', body)
+  const logoUrl = siteUrl ? `${siteUrl}/logo.png` : undefined
+  const html = shell('New Access Request', 'Ikseer — request submitted via the website', body, logoUrl)
   const text = `${plainTextOf(data)}\n\nApprove: ${approveUrl}\nReject: ${rejectUrl}`
   return { subject, html, text }
 }
 
-export function buildDoctorAckEmail(data: AccessRequestValid): BuiltEmail {
+export function buildDoctorAckEmail(data: AccessRequestValid, siteUrl = ''): BuiltEmail {
   const e = escapeHtml
-  const subject = 'We received your Nabd Clinic access request'
+  const subject = 'We received your Ikseer Clinic access request'
   const body = `
     <p>Dear Dr. ${e(data.fullName)},</p>
-    <p>Thank you for requesting access to <strong>Nabd Clinic</strong>. We received your request for <strong>${e(data.clinicName)}</strong> and our team will review it within 1–2 business days.</p>
+    <p>Thank you for requesting access to <strong>Ikseer Clinic</strong>. We received your request for <strong>${e(data.clinicName)}</strong> and our team will review it within 1–2 business days.</p>
     <p>Once approved, you will receive a follow-up email and a member of our customer support team will reach out to you on WhatsApp to share the installer and help you get set up.</p>
     <p style="margin-top:24px;color:#6b7280;font-size:13px">If you did not submit this request, you can ignore this message.</p>
-    <p style="margin-top:24px">— The Nabd Team</p>
+    <p style="margin-top:24px">— The Ikseer Team</p>
   `
-  const html = shell('Request Received', 'Thanks for choosing Nabd Clinic', body)
-  const text = `Dear Dr. ${data.fullName},\n\nThank you for requesting access to Nabd Clinic. We received your request for ${data.clinicName} and our team will review it within 1–2 business days.\n\nOnce approved, you will receive a follow-up email and a member of our customer support team will reach out to you on WhatsApp to share the installer and help you get set up.\n\n— The Nabd Team`
+  const logoUrl = siteUrl ? `${siteUrl}/logo.png` : undefined
+  const html = shell('Request Received', 'Thanks for choosing Ikseer Clinic', body, logoUrl)
+  const text = `Dear Dr. ${data.fullName},\n\nThank you for requesting access to Ikseer Clinic. We received your request for ${data.clinicName} and our team will review it within 1–2 business days.\n\nOnce approved, you will receive a follow-up email and a member of our customer support team will reach out to you on WhatsApp to share the installer and help you get set up.\n\n— The Ikseer Team`
   return { subject, html, text }
 }
 
 export function buildDoctorRejectedEmail(
   data: Pick<AccessRequestValid, 'fullName' | 'clinicName'>,
+  siteUrl = '',
 ): BuiltEmail {
   const e = escapeHtml
-  const subject = 'Update on your Nabd Clinic access request'
+  const subject = 'Update on your Ikseer Clinic access request'
   const body = `
     <p>Dear Dr. ${e(data.fullName)},</p>
-    <p>Thank you for your interest in <strong>Nabd Clinic</strong>. After reviewing your access request for <strong>${e(data.clinicName)}</strong>, we are unable to approve it at this time.</p>
+    <p>Thank you for your interest in <strong>Ikseer Clinic</strong>. After reviewing your access request for <strong>${e(data.clinicName)}</strong>, we are unable to approve it at this time.</p>
     <p>A member of our customer support team will contact you shortly to explain the reason and discuss any next steps that may be available.</p>
-    <p style="margin-top:24px">— The Nabd Team</p>
+    <p style="margin-top:24px">— The Ikseer Team</p>
   `
-  const html = shell('Request Update', 'Nabd Clinic access request', body)
-  const text = `Dear Dr. ${data.fullName},\n\nThank you for your interest in Nabd Clinic. After reviewing your access request for ${data.clinicName}, we are unable to approve it at this time.\n\nA member of our customer support team will contact you shortly to explain the reason and discuss any next steps that may be available.\n\n— The Nabd Team`
+  const logoUrl = siteUrl ? `${siteUrl}/logo.png` : undefined
+  const html = shell('Request Update', 'Ikseer Clinic access request', body, logoUrl)
+  const text = `Dear Dr. ${data.fullName},\n\nThank you for your interest in Ikseer Clinic. After reviewing your access request for ${data.clinicName}, we are unable to approve it at this time.\n\nA member of our customer support team will contact you shortly to explain the reason and discuss any next steps that may be available.\n\n— The Ikseer Team`
   return { subject, html, text }
 }
 
@@ -120,30 +129,31 @@ export function buildDoctorApprovedEmail(
   const e = escapeHtml
   const privacyUrl = `${siteUrl}/privacy`
   const termsUrl = `${siteUrl}/terms`
-  const subject = 'Your Nabd Clinic access is approved'
+  const subject = 'Your Ikseer Clinic access is approved'
   const body = `
     <p>Dear Dr. ${e(data.fullName)},</p>
     <p>Great news — your access request for <strong>${e(data.clinicName)}</strong> has been approved!</p>
     <div style="margin:28px 0;text-align:center">
-      <a href="${appDownloadUrl}" style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#1ECFE0,#0A7A8C);color:white;text-decoration:none;border-radius:8px;font-weight:600;font-size:16px">Download Nabd Clinic</a>
+      <a href="${appDownloadUrl}" style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#1ECFE0,#0A7A8C);color:white;text-decoration:none;border-radius:8px;font-weight:600;font-size:16px">Download Ikseer Clinic</a>
     </div>
     <p>A member of our customer support team will also contact you on WhatsApp to walk you through the setup process.</p>
     <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0">
     <p style="font-size:12px;color:#6b7280;text-align:center">
-      By using Nabd Clinic you agree to our
+      By using Ikseer Clinic you agree to our
       <a href="${termsUrl}" style="color:#0A7A8C">Terms of Use</a>
       and
       <a href="${privacyUrl}" style="color:#0A7A8C">Privacy Policy</a>.
     </p>
-    <p style="margin-top:16px">— The Nabd Team</p>
+    <p style="margin-top:16px">— The Ikseer Team</p>
   `
-  const html = shell('Access Approved', 'Welcome to Nabd Clinic', body)
+  const logoUrl = siteUrl ? `${siteUrl}/logo.png` : undefined
+  const html = shell('Access Approved', 'Welcome to Ikseer Clinic', body, logoUrl)
   const text = [
     `Dear Dr. ${data.fullName},`,
     ``,
     `Great news — your access request for ${data.clinicName} has been approved!`,
     ``,
-    `Download Nabd Clinic: ${appDownloadUrl}`,
+    `Download Ikseer Clinic: ${appDownloadUrl}`,
     ``,
     `A member of our customer support team will also contact you on WhatsApp to walk you through the setup process.`,
     ``,
@@ -151,7 +161,7 @@ export function buildDoctorApprovedEmail(
     `Terms of Use: ${termsUrl}`,
     `Privacy Policy: ${privacyUrl}`,
     ``,
-    `— The Nabd Team`,
+    `— The Ikseer Team`,
   ].join('\n')
   return { subject, html, text }
 }
