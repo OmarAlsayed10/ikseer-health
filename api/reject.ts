@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import nodemailer from 'nodemailer'
 import { verifyApprovalToken } from './_lib/approval-token'
 import { buildDoctorRejectedEmail } from './_lib/email'
+import { sendEmail, fromAddress } from './_lib/resend'
 
 function htmlPage(title: string, message: string, color: string): string {
   return `<!doctype html><html><head><meta charset="utf-8"><title>${title}</title></head>
@@ -48,21 +48,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       .send(htmlPage('Wrong action', '<p>This link is not a rejection link.</p>', '#b91c1c'))
   }
 
-  const host = process.env.SMTP_HOST
-  const port = Number(process.env.SMTP_PORT ?? 587)
-  const user = process.env.SMTP_USER
-  const pass = process.env.SMTP_PASS
-  if (!host || !user || !pass) {
+  let from: string
+  try {
+    from = fromAddress('Nabd')
+  } catch (err) {
+    console.error('[reject] config error:', err)
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
-    return res.status(500).send(htmlPage('Not configured', '<p>SMTP env vars not set.</p>', '#b91c1c'))
+    return res.status(500).send(htmlPage('Not configured', '<p>RESEND_FROM_EMAIL env var not set.</p>', '#b91c1c'))
   }
-
-  const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
-  })
 
   const email = buildDoctorRejectedEmail({
     fullName: payload.fullName,
@@ -70,8 +63,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   })
 
   try {
-    await transporter.sendMail({
-      from: `"Nabd" <${user}>`,
+    await sendEmail({
+      from,
       to: payload.email,
       replyTo: 'nabdhealtheg@gmail.com',
       subject: email.subject,
@@ -79,8 +72,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       text: email.text,
     })
   } catch (err) {
-    const e = err as { code?: string; message?: string }
-    console.error('[reject] SMTP error:', e)
+    const e = err as { message?: string }
+    console.error('[reject] Resend error:', e)
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
     return res.status(502).send(htmlPage('Email failed', `<p>Could not send the rejection email: ${e?.message ?? 'unknown'}</p>`, '#b91c1c'))
   }

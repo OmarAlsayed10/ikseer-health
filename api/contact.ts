@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import nodemailer from 'nodemailer'
 import { checkRateLimit } from './_lib/rateLimit'
 import { escapeHtml } from './_lib/validation'
+import { sendEmail, fromAddress } from './_lib/resend'
 
 const TO_EMAIL = 'ikseerhealth@gmail.com'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
@@ -99,34 +99,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ message: validation.message })
   }
 
-  const host = process.env.SMTP_HOST
-  const port = Number(process.env.SMTP_PORT ?? 587)
-  const user = process.env.SMTP_USER
-  const pass = process.env.SMTP_PASS
-
-  if (!host || !user || !pass) {
-    const missing = [
-      !host && 'SMTP_HOST',
-      !user && 'SMTP_USER',
-      !pass && 'SMTP_PASS',
-    ].filter(Boolean).join(', ')
-    console.error('[contact] SMTP env vars missing:', missing)
-    return res.status(500).json({ message: `Email service not configured (missing: ${missing}).` })
+  let from: string
+  try {
+    from = fromAddress('Ikseer Health')
+  } catch (err) {
+    console.error('[contact] config error:', err)
+    return res.status(500).json({ message: 'Email service not configured (missing RESEND_FROM_EMAIL).' })
   }
 
-  const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
-  })
-
   const email = buildEmail(validation.value)
-  const fromHeader = `"Ikseer Health" <${user}>`
 
   try {
-    await transporter.sendMail({
-      from: fromHeader,
+    await sendEmail({
+      from,
       to: TO_EMAIL,
       replyTo: validation.value.email,
       subject: email.subject,
@@ -135,14 +120,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     })
     return res.status(200).json({ ok: true })
   } catch (err) {
-    const e = err as { code?: string; response?: string; message?: string }
-    console.error('[contact] SMTP error:', {
-      code: e?.code,
-      response: e?.response,
-      message: e?.message,
-    })
+    const e = err as { message?: string }
+    console.error('[contact] Resend error:', e)
     return res.status(502).json({
-      message: `Email send failed: ${e?.code ?? ''} ${e?.message ?? 'unknown error'}`.trim(),
+      message: `Email send failed: ${e?.message ?? 'unknown error'}`,
     })
   }
 }

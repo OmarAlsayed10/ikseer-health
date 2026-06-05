@@ -114,16 +114,44 @@ export function buildDoctorRejectedEmail(
 
 export function buildDoctorApprovedEmail(
   data: Pick<AccessRequestValid, 'fullName' | 'clinicName'>,
+  appDownloadUrl: string,
+  siteUrl: string,
 ): BuiltEmail {
   const e = escapeHtml
+  const privacyUrl = `${siteUrl}/privacy`
+  const termsUrl = `${siteUrl}/terms`
   const subject = 'Your Nabd Clinic access is approved'
   const body = `
     <p>Dear Dr. ${e(data.fullName)},</p>
-    <p>Great news — your access request for <strong>${e(data.clinicName)}</strong> has been approved.</p>
-    <p>A member of our customer support team will contact you shortly on WhatsApp to share the Nabd Clinic installer and walk you through setup.</p>
-    <p style="margin-top:24px">— The Nabd Team</p>
+    <p>Great news — your access request for <strong>${e(data.clinicName)}</strong> has been approved!</p>
+    <div style="margin:28px 0;text-align:center">
+      <a href="${appDownloadUrl}" style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#1ECFE0,#0A7A8C);color:white;text-decoration:none;border-radius:8px;font-weight:600;font-size:16px">Download Nabd Clinic</a>
+    </div>
+    <p>A member of our customer support team will also contact you on WhatsApp to walk you through the setup process.</p>
+    <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0">
+    <p style="font-size:12px;color:#6b7280;text-align:center">
+      By using Nabd Clinic you agree to our
+      <a href="${termsUrl}" style="color:#0A7A8C">Terms of Use</a>
+      and
+      <a href="${privacyUrl}" style="color:#0A7A8C">Privacy Policy</a>.
+    </p>
+    <p style="margin-top:16px">— The Nabd Team</p>
   `
   const html = shell('Access Approved', 'Welcome to Nabd Clinic', body)
-  const text = `Dear Dr. ${data.fullName},\n\nGreat news — your access request for ${data.clinicName} has been approved.\n\nA member of our customer support team will contact you shortly on WhatsApp to share the Nabd Clinic installer and walk you through setup.\n\n— The Nabd Team`
+  const text = [
+    `Dear Dr. ${data.fullName},`,
+    ``,
+    `Great news — your access request for ${data.clinicName} has been approved!`,
+    ``,
+    `Download Nabd Clinic: ${appDownloadUrl}`,
+    ``,
+    `A member of our customer support team will also contact you on WhatsApp to walk you through the setup process.`,
+    ``,
+    `---`,
+    `Terms of Use: ${termsUrl}`,
+    `Privacy Policy: ${privacyUrl}`,
+    ``,
+    `— The Nabd Team`,
+  ].join('\n')
   return { subject, html, text }
 }

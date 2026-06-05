@@ -1,9 +1,9 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import nodemailer from 'nodemailer'
 import { validateAccessRequestServer } from './_lib/validation'
 import { checkRateLimit } from './_lib/rateLimit'
 import { buildAdminEmail, buildDoctorAckEmail } from './_lib/email'
 import { signApprovalToken } from './_lib/approval-token'
+import { sendEmail, fromAddress } from './_lib/resend'
 
 const TO_EMAIL = 'nabdhealtheg@gmail.com'
 
@@ -33,19 +33,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ message: validation.message })
   }
 
-  const host = process.env.SMTP_HOST
-  const port = Number(process.env.SMTP_PORT ?? 587)
-  const user = process.env.SMTP_USER
-  const pass = process.env.SMTP_PASS
+  if (!process.env.RESEND_API_KEY) {
+    console.error('[access-request] RESEND_API_KEY not set')
+    return res.status(500).json({ message: 'Email service not configured (missing RESEND_API_KEY).' })
+  }
 
-  if (!host || !user || !pass) {
-    const missing = [
-      !host && 'SMTP_HOST',
-      !user && 'SMTP_USER',
-      !pass && 'SMTP_PASS',
-    ].filter(Boolean).join(', ')
-    console.error('[access-request] SMTP env vars missing:', missing)
-    return res.status(500).json({ message: `Email service not configured (missing: ${missing}).` })
+  let from: string
+  try {
+    from = fromAddress('Nabd')
+  } catch (err) {
+    console.error('[access-request] RESEND_FROM_EMAIL not set:', err)
+    return res.status(500).json({ message: 'Email service not configured (missing RESEND_FROM_EMAIL).' })
   }
 
   let approveUrl: string
@@ -67,29 +65,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ message: 'Approval system not configured (missing APPROVAL_SECRET).' })
   }
 
-  const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
-  })
-
   const adminEmail = buildAdminEmail(validation.value, approveUrl, rejectUrl)
   const doctorEmail = buildDoctorAckEmail(validation.value)
-  const fromHeader = `"Nabd" <${user}>`
 
   try {
     await Promise.all([
-      transporter.sendMail({
-        from: fromHeader,
+      sendEmail({
+        from,
         to: TO_EMAIL,
         replyTo: validation.value.email,
         subject: adminEmail.subject,
         html: adminEmail.html,
         text: adminEmail.text,
       }),
-      transporter.sendMail({
-        from: fromHeader,
+      sendEmail({
+        from,
         to: validation.value.email,
         replyTo: TO_EMAIL,
         subject: doctorEmail.subject,
@@ -99,14 +89,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     ])
     return res.status(200).json({ ok: true })
   } catch (err) {
-    const e = err as { code?: string; response?: string; message?: string }
-    console.error('[access-request] SMTP error:', {
-      code: e?.code,
-      response: e?.response,
-      message: e?.message,
-    })
+    const e = err as { message?: string }
+    console.error('[access-request] Resend error:', e)
     return res.status(502).json({
-      message: `Email send failed: ${e?.code ?? ''} ${e?.message ?? 'unknown error'}`.trim(),
+      message: `Email send failed: ${e?.message ?? 'unknown error'}`,
     })
   }
 }
