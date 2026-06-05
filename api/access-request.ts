@@ -48,6 +48,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   let approveUrl: string
   let rejectUrl: string
+  let siteUrl: string
   try {
     const basePayload = {
       email: validation.value.email,
@@ -56,7 +57,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
     const approveToken = signApprovalToken({ ...basePayload, action: 'approve' })
     const rejectToken = signApprovalToken({ ...basePayload, action: 'reject' })
-    const siteUrl = (process.env.PUBLIC_SITE_URL ?? '').replace(/\/$/, '')
+    siteUrl = (process.env.PUBLIC_SITE_URL ?? '').replace(/\/$/, '')
       || `https://${req.headers.host ?? ''}`
     approveUrl = `${siteUrl}/api/approve?token=${encodeURIComponent(approveToken)}`
     rejectUrl = `${siteUrl}/api/reject?token=${encodeURIComponent(rejectToken)}`
