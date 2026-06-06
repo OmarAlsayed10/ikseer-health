@@ -81,7 +81,7 @@ export function buildAdminEmail(
       <p style="margin:12px 0 0;color:#6b7280;font-size:12px">Approving emails the doctor that their request has been approved and that customer support will contact them on WhatsApp. Rejecting emails the doctor that their request was not approved and that customer support will contact them with the reason. Links expire in 14 days.</p>
     </div>
   `
-  const logoUrl = siteUrl ? `${siteUrl}/logo.png` : undefined
+  const logoUrl = siteUrl ? `${siteUrl}/favicon.svg` : undefined
   const html = shell('New Access Request', 'Ikseer — request submitted via the website', body, logoUrl)
   const text = `${plainTextOf(data)}\n\nApprove: ${approveUrl}\nReject: ${rejectUrl}`
   return { subject, html, text }
@@ -97,7 +97,7 @@ export function buildDoctorAckEmail(data: AccessRequestValid, siteUrl = ''): Bui
     <p style="margin-top:24px;color:#6b7280;font-size:13px">If you did not submit this request, you can ignore this message.</p>
     <p style="margin-top:24px">— The Ikseer Team</p>
   `
-  const logoUrl = siteUrl ? `${siteUrl}/logo.png` : undefined
+  const logoUrl = siteUrl ? `${siteUrl}/favicon.svg` : undefined
   const html = shell('Request Received', 'Thanks for choosing Ikseer Clinic', body, logoUrl)
   const text = `Dear Dr. ${data.fullName},\n\nThank you for requesting access to Ikseer Clinic. We received your request for ${data.clinicName} and our team will review it within 1–2 business days.\n\nOnce approved, you will receive a follow-up email and a member of our customer support team will reach out to you on WhatsApp to share the installer and help you get set up.\n\n— The Ikseer Team`
   return { subject, html, text }
@@ -115,7 +115,7 @@ export function buildDoctorRejectedEmail(
     <p>A member of our customer support team will contact you shortly to explain the reason and discuss any next steps that may be available.</p>
     <p style="margin-top:24px">— The Ikseer Team</p>
   `
-  const logoUrl = siteUrl ? `${siteUrl}/logo.png` : undefined
+  const logoUrl = siteUrl ? `${siteUrl}/favicon.svg` : undefined
   const html = shell('Request Update', 'Ikseer Clinic access request', body, logoUrl)
   const text = `Dear Dr. ${data.fullName},\n\nThank you for your interest in Ikseer Clinic. After reviewing your access request for ${data.clinicName}, we are unable to approve it at this time.\n\nA member of our customer support team will contact you shortly to explain the reason and discuss any next steps that may be available.\n\n— The Ikseer Team`
   return { subject, html, text }
@@ -146,7 +146,7 @@ export function buildDoctorApprovedEmail(
     </p>
     <p style="margin-top:16px">— The Ikseer Team</p>
   `
-  const logoUrl = siteUrl ? `${siteUrl}/logo.png` : undefined
+  const logoUrl = siteUrl ? `${siteUrl}/favicon.svg` : undefined
   const html = shell('Access Approved', 'Welcome to Ikseer Clinic', body, logoUrl)
   const text = [
     `Dear Dr. ${data.fullName},`,
