@@ -1,11 +1,11 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "notes": "Routine update.",
-  "pub_date": "2026-06-06T00:00:00Z",
+  "pub_date": "2026-06-07T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
       "url": "https://ikseer-health.com/downloads/Ikseer-Clinic-Setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScVUydmRDWkxIZ1QwQzUvdU9uQ1hONjZ3a21OMFNsbUZEQ0pTL0FicjgzTDFGZXFJM0s3R2plRHFjR3UzOFU2NGNPNkNvSWx6RmNwbkdoTnFWUXd3Z29IUmdhbTBpUGcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNzcwNTM1CWZpbGU6SWtzZWVyIENsaW5pY18xLjAuMV94NjQtc2V0dXAuZXhlCnVXRlM5MGdDTE5DVUdBeVFpbVJCNjZkTjZCd2hoTmpLMWZmc05yV1RLLzdCNk9lUUlZMTlEK1B4TkFUSG5OeG9yODd2OGdUOTZEYlJVWG5EeEdTREJRPT0K"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScVUydmRDWkxIZ2U0ZlFRWjZGZzU5c3IzWVhLNVlYeUMzTW5lQ2FKRkVJSDIwMXdRVXludXJ3QThqVm9GNEZyaFJpZHRWbmtjRTdQYkpFVEdsekw4RGdaRUFxbS9pZndnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNzg5Njg5CWZpbGU6SWtzZWVyIENsaW5pY18xLjAuMl94NjQtc2V0dXAuZXhlCkl6YTNPSTRyaTBoRzhwNmdvMFRZZHhvai83cnM4YmdXRi85WlVReVE2WE1BVzVkMVhLSWora2xVSVJWRHB3VzZkSk1Sb3NFT1VKaTNxTit4KzlhaENBPT0K"
     }
   }
 }
