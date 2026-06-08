@@ -1,4 +1,4 @@
-import { Box, Grid, Text, VStack, HStack, Flex } from '@chakra-ui/react'
+import { Box, Grid, Text, HStack, Flex } from '@chakra-ui/react'
 import { FiHardDrive, FiLock, FiSmartphone, FiDownload, FiEyeOff } from 'react-icons/fi'
 import { SectionWrapper } from '../UI/SectionWrapper/SectionWrapper'
 import { AppBadge } from '../UI/AppBadge/AppBadge'
