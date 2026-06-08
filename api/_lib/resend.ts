@@ -27,7 +27,6 @@ export async function sendEmail(msg: EmailMessage): Promise<void> {
 }
 
 export function fromAddress(displayName: string): string {
-  const email = process.env.RESEND_FROM_EMAIL
-  if (!email) throw new Error('RESEND_FROM_EMAIL is not configured')
+  const email = process.env.RESEND_FROM_EMAIL ?? 'noreply@ikseer-health.com'
   return `${displayName} <${email}>`
 }

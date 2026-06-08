@@ -1,10 +1,11 @@
 export interface PricingPlan {
-  key: 'starter' | 'professional' | 'enterprise'
+  key: 'free' | 'starter' | 'professional' | 'enterprise'
   name: string
   description: string
   cta: string
   features: string[]
   isPopular?: boolean
+  isFree?: boolean
   price?: string
 }
 

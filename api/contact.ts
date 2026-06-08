@@ -3,7 +3,7 @@ import { checkRateLimit } from './_lib/rateLimit'
 import { escapeHtml } from './_lib/validation'
 import { sendEmail, fromAddress } from './_lib/resend'
 
-const TO_EMAIL = 'ikseerhealth@gmail.com'
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? 'ikseerhealth@gmail.com'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
 interface ContactInput {
@@ -104,7 +104,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     from = fromAddress('Ikseer Health')
   } catch (err) {
     console.error('[contact] config error:', err)
-    return res.status(500).json({ message: 'Email service not configured (missing RESEND_FROM_EMAIL).' })
+    return res.status(500).json({ message: 'Email service not configured.' })
   }
 
   const email = buildEmail(validation.value)

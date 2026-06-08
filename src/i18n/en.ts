@@ -16,8 +16,8 @@
     primaryCta: 'Request Access',
     secondaryCta: 'Watch Demo',
     priceHook: {
-      prefix: 'Starting from',
-      amount: '700 EGP',
+      prefix: 'Start free —',
+      amount: 'paid plans from 700 EGP',
       suffix: '/ month',
     },
     stats: {
@@ -113,9 +113,21 @@
     headline: 'Simple, Transparent Pricing',
     subheadline: 'Choose the plan that fits your clinic. No hidden fees, no surprises.',
     contactForPricing: 'Contact us for pricing',
+    freeForever: 'Free — forever',
     perMonth: '/ month',
     mostPopular: 'Most Popular',
     plans: {
+      free: {
+        name: 'Forever Free',
+        description: 'For solo doctors just getting started',
+        cta: 'Get Started Free',
+        features: [
+          'Up to 50 patients',
+          'Full appointments & billing',
+          '1 receptionist, 30 invoices/month',
+          'Never expires',
+        ],
+      },
       starter: {
         name: 'Starter',
         description: 'For solo practitioners and small clinics',
@@ -219,6 +231,26 @@
         {
           q: 'What does onboarding look like?',
           a: "After approval, our team schedules a setup call with you. We walk you through the system, import your existing data if needed, and make sure your team is confident before you go live.",
+        },
+        {
+          q: 'Is the Forever Free plan really free?',
+          a: 'Yes, permanently. Up to 50 patients, full appointments and billing, one receptionist, and 30 invoices a month — with no time limit and no credit card required.',
+        },
+        {
+          q: 'How long does it take to implement?',
+          a: 'Most clinics are fully set up within one day. After approval, our team walks you through everything in a single setup call. You can be seeing patients in the system by the next morning.',
+        },
+        {
+          q: 'Can this help reduce missed appointments and no-shows?',
+          a: 'Yes. Ikseer Clinic automatically sends patients a WhatsApp reminder before every appointment. You can customize the message and the timing. Most clinics report a noticeable drop in no-shows within the first week.',
+        },
+        {
+          q: 'Can I customize it to fit my clinic?',
+          a: 'Yes. You can set your working hours, configure appointment types, customize invoice layouts, and edit WhatsApp message templates — all without any technical knowledge.',
+        },
+        {
+          q: 'Do I need technical skills to use it?',
+          a: 'None at all. If you can use a smartphone, you can use Ikseer Clinic. And if you ever get stuck, our team is a message away.',
         },
       ],
     },
@@ -598,6 +630,123 @@
           'Website: www.Ikseer Healthclinic.com',
           'Ikseer Health — Advancing Healthcare, One Product at a Time.',
         ],
+      },
+    ],
+  },
+  whyIkseer: {
+    badge: 'Why Ikseer Clinic',
+    headline: 'Your Clinic Deserves Better Tools',
+    subheadline: 'We built what we could not find anywhere else.',
+    items: [
+      {
+        title: 'Works Without Internet',
+        description: 'No WiFi? Power cut? Ikseer Clinic keeps running. Your appointments, patients, and billing never stop.',
+      },
+      {
+        title: 'Arabic and English, Natively',
+        description: 'Switch between Arabic and English in one click. Write notes, send messages, and print invoices in the language that feels natural.',
+      },
+      {
+        title: 'WhatsApp Reminders, Automatic',
+        description: 'Patients get a WhatsApp message before every appointment — automatically. Fewer no-shows, less time spent on the phone.',
+      },
+      {
+        title: 'All Your Clinics, One Login',
+        description: 'Own more than one clinic? Manage revenue, staff, and appointments across every branch — from a single dashboard.',
+      },
+    ],
+  },
+  builtFor: {
+    badge: 'Who It\'s For',
+    headline: 'Works for How You Actually Practice',
+    items: [
+      {
+        title: 'Solo Doctors',
+        description: 'Just you and maybe a receptionist? Start completely free — no time limit, no payment needed. Full appointments, billing, and patient records from day one.',
+      },
+      {
+        title: 'Clinic Teams',
+        description: 'Multiple doctors, shared patients, different schedules. Everyone works from the same system — and you decide who sees what.',
+      },
+      {
+        title: 'Multi-Branch Owners',
+        description: 'Own the brand — we\'ll help you run it. One dashboard for every clinic, every team member, and every transaction.',
+      },
+    ],
+  },
+  ecosystem: {
+    badge: 'The Ikseer Health Platform',
+    headline: 'One Platform. Every Tool You\'ll Ever Need.',
+    subheadline: 'We\'re building a full suite of healthcare tools that work together seamlessly. Start with Ikseer Clinic today — as we launch new products, everything connects automatically. No switching vendors, no starting over.',
+    products: [
+      {
+        status: 'live' as const,
+        statusLabel: 'Available Now',
+        title: 'Ikseer Clinic',
+        description: 'Your complete clinic management system — appointments, patients, billing, staff, and more.',
+      },
+      {
+        status: 'soon' as const,
+        statusLabel: 'Coming Soon',
+        title: 'Ikseer Pharmacy',
+        description: 'Prescriptions, inventory, and dispensing — connected directly to your clinic\'s patient records.',
+      },
+      {
+        status: 'future' as const,
+        statusLabel: 'In Development',
+        title: 'More Products',
+        description: 'We\'re just getting started. New tools for every part of your healthcare practice, coming soon.',
+      },
+    ],
+    strip: 'One account · One patient record · One owner dashboard · One growing platform',
+  },
+  security: {
+    badge: 'Data Protection',
+    headline: "Your Patients' Data Stays in Your Hands",
+    subheadline: "We didn't cut corners on security. Here's exactly how your data is protected.",
+    items: [
+      {
+        title: 'Stored on Your Device',
+        description: 'Your patient records are saved on your own computer — not on the internet. No one can access them remotely.',
+      },
+      {
+        title: 'You Control Who Sees What',
+        description: 'Receptionists see appointments. Doctors see records. Owners see everything. Each team member has their own access level — nothing more.',
+      },
+      {
+        title: 'Every Staff Member is Verified',
+        description: 'Before anyone joins your team on the system, they confirm their identity through their WhatsApp number. No unauthorized access.',
+      },
+      {
+        title: 'Your Data, Your Backup',
+        description: 'Export your full data anytime. Move it, restore it, or archive it — it belongs to you, always.',
+      },
+      {
+        title: 'We Never Touch Your Data',
+        description: "We don't analyze, share, or sell your patient information. Your data is yours. Full stop.",
+      },
+    ],
+  },
+  homeFaq: {
+    badge: 'Common Questions',
+    headline: 'Quick Answers',
+    viewAll: 'See all FAQs',
+    items: [
+      {
+        q: 'Is the Forever Free plan really free?',
+        a: 'Yes, permanently. Up to 50 patients, full appointments and billing, one receptionist, 30 invoices a month — no time limit, no credit card required.',
+      },
+      {
+        q: 'How quickly can I get started?',
+        a: 'Submit a request today. Our team responds within 1–2 business days. After approval, you get a 14-day trial and a one-on-one setup call from our team.',
+      },
+      {
+        q: 'Can this help reduce missed appointments?',
+        a: 'Yes. Every patient gets a WhatsApp message before their appointment. Most clinics see fewer empty chairs within the first week.',
+      },
+      {
+        q: 'Is my patient data safe?',
+        a: 'Completely. Your data is stored on your computer, not in the cloud. Even we cannot access it.',
       },
     ],
   },

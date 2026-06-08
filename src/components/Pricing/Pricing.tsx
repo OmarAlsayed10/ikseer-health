@@ -14,6 +14,15 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
 
   const plans = [
     {
+      key: 'free' as const,
+      name: t.pricing.plans.free.name,
+      description: t.pricing.plans.free.description,
+      cta: t.pricing.plans.free.cta,
+      features: t.pricing.plans.free.features,
+      isPopular: false,
+      isFree: true,
+    },
+    {
       key: 'starter' as const,
       name: t.pricing.plans.starter.name,
       description: t.pricing.plans.starter.description,
@@ -78,7 +87,7 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
         </Box>
 
         <Grid
-          templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
+          templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
           gap="6"
           alignItems="stretch"
         >
@@ -96,7 +105,7 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
               flexDirection="column"
               position="relative"
               className="animate-fade-up"
-              transform={plan.isPopular ? { md: 'scale(1.02)' } : undefined}
+              transform={plan.isPopular ? { lg: 'scale(1.02)' } : undefined}
             >
               {plan.isPopular && (
                 <Flex
@@ -129,9 +138,15 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
               </VStack>
 
               <Box mb="6" py="4" borderTop="1px solid" borderBottom="1px solid" borderColor="gray.100">
-                <Text fontSize="14px" color="gray.500" fontStyle="italic">
-                  {t.pricing.contactForPricing}
-                </Text>
+                {plan.isFree ? (
+                  <Text fontSize="18px" fontWeight="700" color="teal.600">
+                    {t.pricing.freeForever}
+                  </Text>
+                ) : (
+                  <Text fontSize="14px" color="gray.500" fontStyle="italic">
+                    {t.pricing.contactForPricing}
+                  </Text>
+                )}
               </Box>
 
               <VStack align="start" gap="3" flex="1" mb="8">

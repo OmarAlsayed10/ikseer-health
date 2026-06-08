@@ -15,9 +15,8 @@ import { submitContactForm, validateContactForm } from '../../services/accessReq
 import { CONTACT_TOKENS } from './Contact.token'
 import type { ContactFormData } from './Contact.type'
 
-const Anchor = chakra('a')
-
 const EMPTY_FORM: ContactFormData = { name: '', email: '', subject: '', message: '' }
+const Anchor = chakra('a')
 
 const SCHEMA = {
   name: [validators.required(), validators.minLength(2), validators.maxLength(100)],

@@ -1,6 +1,6 @@
 {
-  "version": "1.0.3",
-  "notes": "- AI Categories now supports multiple ways of searching\nالذكاء الاصطناعي الآن يدعم عدة طرق للبحث",
+  "version": "1.0.4",
+  "notes": "- AI summarizer : it can now summarize all your patients data\n Add reports dashboard with revenue, appointments, patient growth, and top complaints charts\n الذكاء الإصطناعي يستطيع الان تلخيص جميع بيانات المرضى\n إضافة لوحة تقارير مع رسوم بيانية للإيرادات والمواعيد ونمو المرضى وأهم الشكاوى",
   "pub_date": "2026-06-07T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
