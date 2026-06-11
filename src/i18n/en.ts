@@ -211,14 +211,6 @@
           a: "Click 'Request Access' on our site. Fill out the registration form with your clinic information. Our team reviews each application and responds within 1–2 business days.",
         },
         {
-          q: 'Is there a free trial?',
-          a: 'Yes. Upon approval, you receive a 14-day trial. Your trial is tied to your specific device and clinic registration — it cannot be shared or transferred.',
-        },
-        {
-          q: 'What happens after the trial?',
-          a: "At the end of your trial, you can choose a plan that fits your clinic. We'll guide you through the entire process.",
-        },
-        {
           q: 'Is my patient data safe?',
           a: "Absolutely. Patient data is encrypted at rest and in transit. We never share or sell your data. Our system is built with privacy by design.",
         },
@@ -245,10 +237,6 @@
         {
           q: 'Can I customize it to fit my clinic?',
           a: 'Yes. You can set your working hours, configure appointment types, customize invoice layouts, and edit WhatsApp message templates — all without any technical knowledge.',
-        },
-        {
-          q: 'Do I need technical skills to use it?',
-          a: 'None at all. If you can use a smartphone, you can use Ikseer Clinic. And if you ever get stuck, our team is a message away.',
         },
       ],
     },
@@ -426,18 +414,6 @@
         ],
       },
       {
-        title: 'Third-Party Services',
-        paragraphs: [
-          'Ikseer Health products may integrate with third-party services such as WhatsApp for OTP delivery. These services are governed by their own privacy policies, and we encourage you to review them independently. Ikseer Health is not responsible for the data practices of third-party providers.',
-        ],
-      },
-      {
-        title: "Children's Data",
-        paragraphs: [
-          'Ikseer Health products are intended for use by licensed healthcare professionals and authorized staff only. We do not knowingly collect personal data from individuals under the age of 18 outside of patient or customer records entered by authorized medical staff.',
-        ],
-      },
-      {
         title: 'Future Applications',
         paragraphs: [
           'As Ikseer Health grows and new applications are added to the platform, this Privacy Policy will be updated to reflect any new data practices introduced by those products. Users will be notified of significant updates through our website and in-app notifications.',
@@ -603,18 +579,6 @@
         ],
       },
       {
-        title: 'Limitation of Liability',
-        paragraphs: [
-          'To the fullest extent permitted by law, Ikseer Health and its developers shall not be liable for any indirect, incidental, special, or consequential damages arising out of your use of any Ikseer Health product or website, including but not limited to loss of data, loss of revenue, or patient harm.',
-        ],
-      },
-      {
-        title: 'Governing Law',
-        paragraphs: [
-          'These Terms are governed by the laws of the Arab Republic of Egypt. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the competent courts in Egypt.',
-        ],
-      },
-      {
         title: 'Amendments',
         paragraphs: [
           'We may update these Terms at any time. Continued use of any Ikseer Health product or website after updates constitutes your acceptance of the revised Terms. Major updates will be communicated via in-app notification and/or the Ikseer Health website.',
@@ -739,10 +703,6 @@
       {
         q: 'Is the Forever Free plan really free?',
         a: 'Yes, permanently. Up to 20 patients, full appointments and billing, one receptionist, 30 invoices a month — no time limit, no credit card required.',
-      },
-      {
-        q: 'How quickly can I get started?',
-        a: 'Submit a request today. Our team responds within 1–2 business days. After approval, you get a 14-day trial and a one-on-one setup call from our team.',
       },
       {
         q: 'Can this help reduce missed appointments?',
