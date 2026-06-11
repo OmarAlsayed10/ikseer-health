@@ -44,7 +44,7 @@ export function BuiltFor() {
               const color = ACCENT_COLORS[i]
               return (
                 <Box
-                  key={item.title}
+                  key={i}
                   bg="white"
                   borderRadius="2xl"
                   p="8"

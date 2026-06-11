@@ -51,7 +51,7 @@ export function WhyIkseer() {
               const Icon = ICONS[i]
               return (
                 <Box
-                  key={item.title}
+                  key={i}
                   bg="gray.50"
                   borderRadius="2xl"
                   p="6"

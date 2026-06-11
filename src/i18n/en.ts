@@ -228,7 +228,7 @@
         },
         {
           q: 'How long does it take to implement?',
-          a: 'Most clinics are fully set up within one day. After approval, our team walks you through everything in a single setup call. You can be seeing patients in the system by the next morning.',
+          a:"The app takes a few minutes to install on your device immediately after downloading it. Log in and get started right away."
         },
         {
           q: 'Can this help reduce missed appointments and no-shows?',
@@ -236,7 +236,7 @@
         },
         {
           q: 'Can I customize it to fit my clinic?',
-          a: 'Yes. You can set your working hours, configure appointment types, customize invoice layouts, and edit WhatsApp message templates — all without any technical knowledge.',
+          a: 'Yes. You can set your working hours, configure appointment types,and edit WhatsApp message templates — all without any technical knowledge.',
         },
       ],
     },
@@ -352,9 +352,7 @@
           'Depending on which Ikseer Health application you use, we may collect and store:',
         ],
         bullets: [
-          'Patient information: names, contact details, medical history, diagnoses, prescriptions, and invoices.',
           'Doctor and staff information: names, professional credentials, clinic affiliations, and contact details.',
-          'Pharmacy data: medication inventory, dispensing records, and customer transaction data (Ikseer Pharmacy, coming soon).',
           'Usage data: app activity, login times, device information, and session logs.',
           'Website data: standard analytics such as IP address, browser type, and pages visited when you browse the Ikseer Health website.',
         ],
@@ -369,7 +367,6 @@
           'Providing, operating, and improving our applications and website.',
           'Enabling clinic and pharmacy management features.',
           'Generating invoices, prescriptions, and appointment or transaction records.',
-          'Sending OTP codes via WhatsApp for staff verification.',
           'Displaying AI-assisted suggestions to healthcare providers.',
           'Communicating product updates, new app launches, and service announcements to registered users.',
         ],
@@ -469,7 +466,7 @@
           'Licensed medical and healthcare professionals.',
           'Clinic owners, administrators, and managers.',
           'Pharmacists and pharmacy staff (for Ikseer Pharmacy).',
-          'Authorized staff members onboarded through verified processes such as WhatsApp OTP.',
+          'Authorized staff members onboarded through verified processes.',
         ],
       },
       {
@@ -519,7 +516,7 @@
       {
         title: 'Staff and Multi-Clinic / Multi-Branch Management',
         paragraphs: [
-          'Account owners are fully responsible for all actions taken by staff accounts they create or authorize, including receptionists or staff added via WhatsApp OTP or any other onboarding method. It is the account owner\'s responsibility to revoke staff access promptly when employment or authorization ends.',
+          'Account owners are fully responsible for all actions taken by staff accounts they create or authorize, including receptionists or staff added via OTP or any other onboarding method. It is the account owner\'s responsibility to revoke staff access promptly when employment or authorization ends.',
         ],
       },
       {
@@ -602,11 +599,11 @@
     items: [
       {
         title: 'Works Without Internet',
-        description: 'No WiFi? Power cut? Ikseer Clinic keeps running. Your appointments, patients, and billing never stop.',
+        description: 'No WiFi? Ikseer Clinic keeps running. Your appointments, patients, and billing never stop.',
       },
       {
         title: 'Arabic and English, Natively',
-        description: 'Switch between Arabic and English in one click. Write notes, send messages, and print invoices in the language that feels natural.',
+        description: 'Switch between Arabic and English in one click. Write notes, send messages',
       },
       {
         title: 'WhatsApp Reminders, Automatic',

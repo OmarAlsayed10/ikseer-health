@@ -63,7 +63,13 @@ export function useScrollAnimationGroup<T extends HTMLElement>(
       { threshold, rootMargin },
     )
 
-    children.forEach((child) => observer.observe(child))
+    children.forEach((child) => {
+      // Reveal anything already in the viewport synchronously, so content is
+      // never stuck invisible if the observer's first async callback is missed.
+      const rect = child.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) child.classList.add('in-view')
+      observer.observe(child)
+    })
     return () => observer.disconnect()
   }, [threshold, rootMargin, once])
 

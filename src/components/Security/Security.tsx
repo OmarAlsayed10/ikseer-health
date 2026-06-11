@@ -54,7 +54,7 @@ export function Security() {
               const isLast = i === 4
               return (
                 <Box
-                  key={item.title}
+                  key={i}
                   bg="white"
                   borderRadius="xl"
                   p="6"

@@ -107,7 +107,7 @@ export function Ecosystem() {
               const style = STATUS_STYLES[product.status]
               return (
                 <VStack
-                  key={product.title}
+                  key={i}
                   gap="0"
                   align="center"
                   px={{ base: '0', md: '4' }}
