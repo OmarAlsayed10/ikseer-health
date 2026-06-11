@@ -10,6 +10,7 @@ export interface RateLimitOptions {
   windowMs: number
 }
 
+
 export interface RateLimitResult {
   allowed: boolean
   resetAt: number
