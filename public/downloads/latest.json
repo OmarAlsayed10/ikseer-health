@@ -1,6 +1,6 @@
 {
-  "version": "1.0.4",
-  "notes": "- AI summarizer : it can now summarize all your patients data\n Add reports dashboard with revenue, appointments, patient growth, and top complaints charts\n الذكاء الإصطناعي يستطيع الان تلخيص جميع بيانات المرضى\n إضافة لوحة تقارير مع رسوم بيانية للإيرادات والمواعيد ونمو المرضى وأهم الشكاوى",
+  "version": "1.0.5",
+  "notes": "- Egyptian language support\nnew looking for all tabs \nندعم الان اللغة المصرية بطلاقة\nشكل جديد لكل التابات",
   "pub_date": "2026-06-07T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
