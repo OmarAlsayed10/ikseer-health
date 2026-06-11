@@ -12,7 +12,7 @@
     badge: 'Digital Health Platform',
     headline: 'One Platform for Modern Healthcare',
     subheadline:
-      'Ikseer Health is a growing suite of tools built for healthcare providers. Start with Ikseer Clinic — our comprehensive clinic management system — and access more products as we expand.',
+      'Ikseer Health is a suite of tools built for healthcare providers. Start with Ikseer Clinic — our comprehensive clinic management system.',
     primaryCta: 'Request Access',
     secondaryCta: 'Watch Demo',
     priceHook: {
@@ -34,12 +34,12 @@
     badge: 'Ikseer Clinic — Demo',
     headline: 'See Ikseer Clinic in Action',
     subheadline:
-      'Watch how real clinics manage their entire workflow — from patient registration to invoice — in one system.',
+      'See how real clinics run their entire workflow — from patient registration to invoice — in one system.',
     playLabel: 'Play Demo',
     chapters: {
       overview: 'System Overview',
       appointments: 'Appointment Flow',
-      billing: 'Billing & Invoicing',
+      billing: 'Invoicing & Notifications',
     },
   },
   features: {
@@ -59,9 +59,9 @@
           'Intelligent appointment booking with automatic conflict detection and patient reminders.',
       },
       billing: {
-        title: 'Billing & Invoicing',
+        title: 'Invoicing & Notifications',
         description:
-          'Generate professional invoices from completed visits. Track payments and outstanding balances effortlessly.',
+          'Generate invoices from completed visits. Track payments and outstanding balances with ease.',
       },
       reports: {
         title: 'Clinical Reports',
@@ -76,7 +76,7 @@
       whatsapp: {
         title: 'WhatsApp Messaging',
         description:
-          'Send appointment reminders, test results, and custom messages to patients directly via WhatsApp — with AI-assisted drafting in Arabic or English.',
+          'Send appointment reminders, test results, and custom messages to patients directly via WhatsApp — in one click.',
       },
       ai: {
         title: 'AI Clinical Assistant',
@@ -92,19 +92,19 @@
   products: {
     badge: 'Our Products',
     headline: 'Healthcare Tools Built for Every Provider',
-    subheadline: 'A growing suite of products designed to cover every layer of modern healthcare delivery.',
+    subheadline: 'A suite of tools designed to cover every aspect of modern healthcare delivery.',
     clinic: {
       badge: 'Live Now',
       title: 'Ikseer Clinic',
-      description: 'A comprehensive clinic management system. Manage patients, appointments, billing, and your entire team in one place.',
-      features: ['Patient Records', 'Smart Scheduling', 'Billing & Invoicing', 'Clinical Reports', 'Staff Management'],
+      description: 'A comprehensive clinic management system. Track your patients, appointments, billing, and your entire team in one place.',
+      features: ['Patient Records', 'Smart Scheduling', 'Invoicing & Notifications', 'Clinical Reports', 'Staff Management'],
       cta: 'Explore Ikseer Clinic',
     },
-    pharmacy: {
+    lab: {
       badge: 'Coming Soon',
-      title: 'Ikseer Pharmacy',
-      description: 'Complete pharmacy management — dispensing, inventory, prescriptions, and customer records — built for modern pharmacies.',
-      features: ['Medication Inventory', 'Prescription Management', 'Dispensing Records', 'Customer Transactions', 'Analytics & Reports'],
+      title: 'Ikseer Lab',
+      description: 'Complete lab management — test orders, results, and patient records — integrated directly with your clinic.',
+      features: ['Test Order Management', 'Results Tracking', 'Lab Records', 'Clinic Integration', 'Analytics & Reports'],
       cta: 'Coming Soon',
     },
   },
@@ -122,7 +122,7 @@
         description: 'For solo doctors just getting started',
         cta: 'Get Started Free',
         features: [
-          'Up to 50 patients',
+          'Up to 20 patients',
           'Full appointments & billing',
           '1 receptionist, 30 invoices/month',
           'Never expires',
@@ -176,16 +176,14 @@
     headline: 'Built to Transform Healthcare',
     story: [
       "We didn't start Ikseer Health in a boardroom. We started it in frustration — watching doctors wrestle with paperwork, watching staff juggle disconnected systems, watching healthcare providers lose time that should be going to patients.",
-      "Ikseer Health (إكسير) is Arabic for elixir — the ancient alchemists' quest for a substance that heals, transforms, and restores. That idea of transformation is at the heart of everything we build: turning fragmented, frustrating healthcare workflows into something precise, connected, and alive.",
-      'We are a team of developers and healthcare professionals who understood that the tools most providers use were built for billing departments, not for care teams. So we rebuilt from scratch — starting with Ikseer Clinic for clinic management, and building outward to cover every layer of modern healthcare delivery.',
+      'We are a team of developers and healthcare professionals who understood that the tools most providers use were built for billing departments, not for care teams. We started with Ikseer Clinic for clinic management, and expanded to cover every aspect of modern healthcare delivery.',
       'Every product we build is shaped by real feedback from real healthcare professionals. Not focus groups. Not surveys. Actual conversations, actual workflows, actual problems.',
-      "We're not just a software company. We're in the business of giving healthcare providers their time back.",
     ],
     values: {
       headline: 'What We Stand For',
       care: {
-        title: 'Patient-First Design',
-        description: 'Every decision starts with the question: does this help the patient experience?',
+        title: 'Design That Helps You Organize Your Clinic Better',
+        description: 'Simple design is not enough. We build tools that understand clinic workflow and help you organize it better — so you can focus on caring for your patients.',
       },
       precision: {
         title: 'Clinical Precision',
@@ -197,7 +195,7 @@
       },
       support: {
         title: 'Real Support',
-        description: "When something goes wrong, you reach a person — not a ticket queue.",
+        description: 'We provide 24/7 support to help you at any time with any question.',
       },
     },
   },
@@ -234,7 +232,7 @@
         },
         {
           q: 'Is the Forever Free plan really free?',
-          a: 'Yes, permanently. Up to 50 patients, full appointments and billing, one receptionist, and 30 invoices a month — with no time limit and no credit card required.',
+          a: 'Yes, permanently. Up to 20 patients, full appointments and billing, one receptionist, and 30 invoices a month — with no time limit and no credit card required.',
         },
         {
           q: 'How long does it take to implement?',
@@ -339,13 +337,13 @@
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
     },
-    copyright: '© 2025 Ikseer Health. All rights reserved.',
+    copyright: '© 2026 Ikseer Health. All rights reserved.',
   },
   privacy: {
     badge: 'Privacy Policy',
     headline: 'Privacy Policy — Ikseer Health',
-    effectiveDate: 'Effective Date: May 28, 2025',
-    lastUpdated: 'Last Updated: May 28, 2025',
+    effectiveDate: 'Effective Date: May 28, 2026',
+    lastUpdated: 'Last Updated: May 28, 2026',
     sections: [
       {
         title: 'Introduction',
@@ -357,7 +355,7 @@
         ],
         bullets: [
           'Ikseer Clinic — a comprehensive clinic management app for doctors and healthcare professionals.',
-          'Ikseer Pharmacy — a pharmacy management solution (coming soon).',
+          'Ikseer Lab — a lab management app for medical laboratories, integrated directly with your clinic (coming soon).',
         ],
       },
       {
@@ -464,8 +462,8 @@
   terms: {
     badge: 'Terms of Service',
     headline: 'Terms of Service — Ikseer Health',
-    effectiveDate: 'Effective Date: May 28, 2025',
-    lastUpdated: 'Last Updated: May 28, 2025',
+    effectiveDate: 'Effective Date: May 28, 2026',
+    lastUpdated: 'Last Updated: May 28, 2026',
     sections: [
       {
         title: 'Introduction and Acceptance of Terms',
@@ -475,7 +473,7 @@
         ],
         bullets: [
           'Ikseer Clinic — clinic management for healthcare professionals.',
-          'Ikseer Pharmacy — pharmacy management (coming soon).',
+          'Ikseer Lab — lab management, integrated directly with your clinic (coming soon).',
           'Any additional applications introduced by Ikseer Health in the future.',
         ],
       },
@@ -688,6 +686,12 @@
       {
         status: 'soon' as const,
         statusLabel: 'Coming Soon',
+        title: 'Ikseer Lab',
+        description: 'Test orders, results, and diagnostics — connected directly to your clinic\'s patient records.',
+      },
+      {
+        status: 'soon' as const,
+        statusLabel: 'Coming Soon',
         title: 'Ikseer Pharmacy',
         description: 'Prescriptions, inventory, and dispensing — connected directly to your clinic\'s patient records.',
       },
@@ -734,7 +738,7 @@
     items: [
       {
         q: 'Is the Forever Free plan really free?',
-        a: 'Yes, permanently. Up to 50 patients, full appointments and billing, one receptionist, 30 invoices a month — no time limit, no credit card required.',
+        a: 'Yes, permanently. Up to 20 patients, full appointments and billing, one receptionist, 30 invoices a month — no time limit, no credit card required.',
       },
       {
         q: 'How quickly can I get started?',

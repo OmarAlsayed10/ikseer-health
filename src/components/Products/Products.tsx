@@ -1,5 +1,5 @@
 import { Box, Grid, Text, VStack, HStack, Flex } from '@chakra-ui/react'
-import { Stethoscope, Pill, Check, ArrowRight, Clock } from 'lucide-react'
+import { Stethoscope, Microscope, Check, ArrowRight, Clock } from 'lucide-react'
 import { SectionWrapper } from '../UI/SectionWrapper/SectionWrapper'
 import { AppBadge } from '../UI/AppBadge/AppBadge'
 import { AppButton } from '../UI/AppButton/AppButton'
@@ -110,7 +110,7 @@ export function Products({ onExploreClinic }: ProductsProps) {
             />
           </Box>
 
-          {/* Ikseer Pharmacy — coming soon */}
+          {/* Ikseer Lab — coming soon */}
           <Box
             bg="white"
             border="1px solid"
@@ -134,20 +134,20 @@ export function Products({ onExploreClinic }: ProductsProps) {
                 color="gray.400"
                 flexShrink={0}
               >
-                <Pill size={22} />
+                <Microscope size={22} />
               </Flex>
-              <AppBadge variant="dark">{t.products.pharmacy.badge}</AppBadge>
+              <AppBadge variant="dark">{t.products.lab.badge}</AppBadge>
             </HStack>
 
             <Text fontSize="1.375rem" fontWeight="700" color="gray.700" mb="2">
-              {t.products.pharmacy.title}
+              {t.products.lab.title}
             </Text>
             <Text fontSize="0.9375rem" color="gray.500" lineHeight="1.7" mb="6">
-              {t.products.pharmacy.description}
+              {t.products.lab.description}
             </Text>
 
             <VStack align="start" gap="2" mb="8" flex="1">
-              {t.products.pharmacy.features.map((f) => (
+              {t.products.lab.features.map((f) => (
                 <HStack key={f} gap="2">
                   <Box color="gray.400" flexShrink={0}>
                     <Check size={15} />
@@ -171,7 +171,7 @@ export function Products({ onExploreClinic }: ProductsProps) {
               w="fit-content"
             >
               <Clock size={16} />
-              <Text>{t.products.pharmacy.cta}</Text>
+              <Text>{t.products.lab.cta}</Text>
             </HStack>
           </Box>
         </Grid>

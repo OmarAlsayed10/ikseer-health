@@ -1,11 +1,11 @@
 import { Box, Text, VStack, HStack, Flex, Grid } from '@chakra-ui/react'
-import { FiMonitor, FiPackage, FiPlus, FiArrowRight } from 'react-icons/fi'
+import { FiMonitor, FiActivity, FiPackage, FiPlus, FiArrowRight } from 'react-icons/fi'
 import { SectionWrapper } from '../UI/SectionWrapper/SectionWrapper'
 import { AppBadge } from '../UI/AppBadge/AppBadge'
 import { useTranslation } from '../../hooks/useTranslation'
 import { useScrollAnimationGroup } from '../../hooks/useScrollAnimation'
 
-const PRODUCT_ICONS = [FiMonitor, FiPackage, FiPlus]
+const PRODUCT_ICONS = [FiMonitor, FiActivity, FiPackage, FiPlus]
 
 type ProductStatus = 'live' | 'soon' | 'future'
 
@@ -84,21 +84,21 @@ export function Ecosystem() {
         {/* Products connected display */}
         <Box position="relative" mb="10" className="animate-fade-up animate-delay-3">
           <Grid
-            templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
+            templateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
             gap="0"
-            maxW="860px"
+            maxW="1000px"
             mx="auto"
             position="relative"
           >
-            {/* Connector line — desktop only */}
+            {/* Connector line — large desktop only */}
             <Box
-              display={{ base: 'none', md: 'block' }}
+              display={{ base: 'none', lg: 'block' }}
               position="absolute"
               top="36px"
-              left="calc(16.67% + 26px)"
-              right="calc(16.67% + 26px)"
+              left="calc(12.5% + 26px)"
+              right="calc(12.5% + 26px)"
               h="2px"
-              bg="linear-gradient(90deg, #0FACBE 0%, #CBD5E0 50%, #CBD5E0 100%)"
+              bg="linear-gradient(90deg, #0FACBE 0%, #CBD5E0 60%, #CBD5E0 100%)"
               zIndex={0}
             />
 
