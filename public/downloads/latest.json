@@ -1,5 +1,5 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "notes": "- SOAP bug fixed \nتم إصلاح خطأ في SOAP",
   "pub_date": "2026-06-07T00:00:00Z",
   "platforms": {
