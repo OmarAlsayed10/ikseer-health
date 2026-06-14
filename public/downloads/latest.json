@@ -1,11 +1,11 @@
 {
-  "version": "1.0.7",
-  "notes": "- SOAP bug fixed \nتم إصلاح خطأ في SOAP",
-  "pub_date": "2026-06-07T00:00:00Z",
+  "version": "1.0.8",
+  "notes": "قسم الروشتات — صفحة جديدة تقدر تدوّر فيها وتتصفّح كل الروشتات اللي كتبتها، وكمان تبويب للروشتات في ملف كل مريض. واسم المريض دلوقتي بيظهر على كل روشتة.\nملخص إكلينيكي أذكى (SOAP) — أسرع وأدق. بيجمّع تفاصيل الكشف تلقائيًا، ويسيبك تراجع وتعدّل التقييم وخطة العلاج قبل الحفظ. والملفات المرفقة بتفتح بضغطة واحدة.\nواتساب بيفتح على طول — إرسال الرسالة دلوقتي بيفتح تطبيق واتساب مباشرة بدل صفحة المتصفح.\nتعامل أفضل مع الملفات — ملفات PDF والصور بتفتح جوّه التطبيق، وأسماء الملفات العربية بقت تظهر مظبوطة.\nقوائم أسرع — المرضى والفواتير والروشتات بتتحمّل صفحة صفحة، فالعيادات الكبيرة تفضل سريعة.\nلمسات أنعم — رسائل تأكيد حذف أوضح، وتنبيهات التذكير بتظهر في وقتها.\n@@EN@@\nPrescriptions hub — a new Prescriptions page to search and browse every prescription you've written, plus a Prescriptions tab on each patient's profile. The patient's name now shows on every prescription.\nSmarter clinical summary (SOAP) — faster and more accurate. It now builds the visit details automatically and lets you review and edit the assessment & treatment plan before saving. Attached files open with one click.\nWhatsApp opens directly — sending a message now opens the WhatsApp app right away instead of the browser page.\nBetter file handling — PDFs and images open inside the app, and Arabic file names are no longer garbled.\nFaster long lists — patients, invoices, and prescriptions now load page-by-page, so big clinics stay fast.\nPolished details — clearer delete confirmations and on-time reminder notifications.",
+  "pub_date": "2026-06-14T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
       "url": "https://ikseer-health.com/downloads/Ikseer-Clinic-Setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTRHJkUEhsMkYrTmlWbnBUT0Jyc3AxbzRoY3FLSUJjWjkvSkNpZkhpdjhZKzBDQlFMMk5zNWxNbkk0VVhNdXNLcmpWS0FnMXRiZmpPNmNGSmRzMFlFVVlRVklDMWlHekFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMTk2MDI1CWZpbGU6SWtzZWVyIENsaW5pY18xLjAuN194NjQtc2V0dXAuZXhlCkNoZVlOd3h1aWlTUk5DdXF6eXo0eDJ6RnZjRGhLUWxmSml6V1c0d2p2WXA1aC8vL04ydkhJbjdVUVhiUnNLNGNMdlFxeVF3MjdVdnNialZXaERJZUFnPT0K"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTRHJkUEhsMkYrTm1qemZmNlMxS1l5REFPRXhHUjZCMHpDSWZ3SUp4Tjczc0NqaGsxNU4yeituUkR0ZUlLTzRBQk1xMGVyczdGaXJDU01LaEFpc1pzVm9kMy9KSEVnVWdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNDQ4OTk3CWZpbGU6SWtzZWVyIENsaW5pY18xLjAuOF94NjQtc2V0dXAuZXhlCmxTYlBzcElHVkFWTVNwZVVQUHQya1IrK1N2RG5IeWtjSGRseU5tMnV4VDI5U3FDQ2ZwU1RGSmFHRGh6TGtVMHNXQnNMeXZpWU1pSmF1OXlxN3U2TUFnPT0K"
     }
   }
 }
