@@ -20,7 +20,7 @@ export const MEDIA = {
   },
 
   demos: {
-    overview: 'https://res.cloudinary.com/dr85phcjz/video/upload/q_auto/f_auto/v1780659609/0604_2_2_fyrefy.mp4',
+    overview: 'https://res.cloudinary.com/dr85phcjz/video/upload/q_auto/f_auto/v1781471982/Blue_Digital_Website_New_Features_Announcement_Video_rom50w.mp4',
     appointment: vid('ikseer/demo-appointment'),
     billing: vid('ikseer/demo-billing'),
   },

@@ -110,8 +110,8 @@
   },
   pricing: {
     badge: 'Pricing',
-    headline: 'Simple, Transparent Pricing',
-    subheadline: 'Choose the plan that fits your clinic. No hidden fees, no surprises.',
+    headline: 'Flexible plans built around your clinic needs.',
+    subheadline: 'Get in touch and we\'ll find the right fit for you',
     contactForPricing: 'Contact us for pricing',
     freeForever: 'Free — forever',
     perMonth: '/ month',

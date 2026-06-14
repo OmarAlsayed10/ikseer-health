@@ -127,8 +127,8 @@ export const ar: Translations = {
   },
   pricing: {
     badge: "الأسعار",
-    headline: "أسعار واضحة وشفافة",
-    subheadline: "اختار الخطة المناسبة لعيادتك. من غير رسوم مخفية أو مفاجآت.",
+    headline: "خطط مرنة مصممة حسب احتياجات عيادتك.",
+    subheadline: "تواصل معنا ونساعدك تلاقي الخطة المناسبة.",
     contactForPricing: "تواصل معنا للأسعار",
     freeForever: "مجاني — دايماً",
     perMonth: "/ شهرياً",
