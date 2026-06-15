@@ -1,6 +1,6 @@
 {
-  "version": "1.0.8",
-  "notes": "قسم الروشتات — صفحة جديدة تقدر تدوّر فيها وتتصفّح كل الروشتات اللي كتبتها، وكمان تبويب للروشتات في ملف كل مريض. واسم المريض دلوقتي بيظهر على كل روشتة.\nملخص إكلينيكي أذكى (SOAP) — أسرع وأدق. بيجمّع تفاصيل الكشف تلقائيًا، ويسيبك تراجع وتعدّل التقييم وخطة العلاج قبل الحفظ. والملفات المرفقة بتفتح بضغطة واحدة.\nواتساب بيفتح على طول — إرسال الرسالة دلوقتي بيفتح تطبيق واتساب مباشرة بدل صفحة المتصفح.\nتعامل أفضل مع الملفات — ملفات PDF والصور بتفتح جوّه التطبيق، وأسماء الملفات العربية بقت تظهر مظبوطة.\nقوائم أسرع — المرضى والفواتير والروشتات بتتحمّل صفحة صفحة، فالعيادات الكبيرة تفضل سريعة.\nلمسات أنعم — رسائل تأكيد حذف أوضح، وتنبيهات التذكير بتظهر في وقتها.\n@@EN@@\nPrescriptions hub — a new Prescriptions page to search and browse every prescription you've written, plus a Prescriptions tab on each patient's profile. The patient's name now shows on every prescription.\nSmarter clinical summary (SOAP) — faster and more accurate. It now builds the visit details automatically and lets you review and edit the assessment & treatment plan before saving. Attached files open with one click.\nWhatsApp opens directly — sending a message now opens the WhatsApp app right away instead of the browser page.\nBetter file handling — PDFs and images open inside the app, and Arabic file names are no longer garbled.\nFaster long lists — patients, invoices, and prescriptions now load page-by-page, so big clinics stay fast.\nPolished details — clearer delete confirmations and on-time reminder notifications.",
+  "version": "1.0.9",
+  "notes":"fixed security issues\nتم حل مشاكل الأمان",
   "pub_date": "2026-06-14T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
