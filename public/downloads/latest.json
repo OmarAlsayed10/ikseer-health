@@ -1,11 +1,11 @@
 {
-  "version": "1.1.0",
-  "notes":"fixed security issues\n fixed login issues \nتصحيح مشاكل أمنية\nتصحيح مشاكل تسجيل الدخول",
+  "version": "1.1.1",
+  "notes":"تحديث Ikseer Clinic — الإصدار 1.1.1\n\nأهلاً بيك في أحدث إصدار! دي أهم التحسينات من إصدار 1.0.9:\n\nالمزامنة بين الأجهزة: الفواتير، الروشتات، والملاحظات بتتزامن أوتوماتيكي بين كل أجهزتك — تشتغل من الكومبيوتر أو أكتر من جهاز وكل حاجة متحدثة في نفس اللحظة، وبترتيب آمن حتى لو ساعة أحد الأجهزة مش مضبوطة.\n\nتفضل مسجّل دخولك: خلاص مفيش تسجيل دخول متكرر — التطبيق بيحافظ على جلستك بأمان.\n\nتحديثات أوتوماتيكية: التطبيق بيتحدث نفسه أوتوماتيكي من غير ما تضغط زرار التحديث يدويًا.\n\nأداء واستقرار أفضل: إصلاح مشكلة عرض صفحة تفاصيل المريض، وتحسينات عامة في السرعة والثبات.\n\nشكرًا إنك بتستخدم Ikseer Clinic — لو واجهتك أي مشكلة، تواصل معانا في أي وقت.\n\n---\n\nIkseer Clinic Update — Version 1.1.1\n\nWelcome to the latest version! Here's what's new since v1.0.9:\n\nMulti-device sync: Your invoices, prescriptions, and notes now sync automatically across all your devices — work from your computer or multiple devices and everything stays up to date in real time, with safe ordering even if a device's clock is off.\n\nStay signed in: No more repeated logins — the app keeps your session securely.\n\nAutomatic updates: The app now updates itself automatically in the background — no need to press the update button manually.\n\nBetter performance & stability: Fixed the patient details page display issue, plus general improvements in speed and stability.\n\nThank you for using Ikseer Clinic — if you run into any issue, reach out to us anytime.",
   "pub_date": "2026-06-14T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
       "url": "https://ikseer-health.com/downloads/Ikseer-Clinic-Setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTRHJkUEhsMkYrTnJGVkxDampVOE5zdytVRXpNTGppNHJxeWVYVGRRT2w2YUR2bXcwMyswa0dJOENObzFDamVKMlRHUEE0TEt4WURqNkVsNmwwUFFGRk1LZWxzZ3FNMEF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNzQ2OTcxCWZpbGU6SWtzZWVyIENsaW5pY18xLjEuMF94NjQtc2V0dXAuZXhlCkxSODZNWThwek5WVUh4dEJ6bTVuQUNLUWdaWldlYjd6SDJyRW5kNEVhSG1EM2cwTGZXQ0NRcm5ranhDWW41NFpXRTZSajF6WElFUzVGZSt1bG4xOUNRPT0K"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTRHJkUEhsMkYrTm80Tk91cm4xUWFYZVhTMUlzODRDN3R5dkcvNjFPQUlvYWN2Znp4VWhWU2p6UWFHVXcxVGNCRzJRcG0zR2xrVjRyNENnOUI4WmxZOWdtUWVINWlwakFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyMjIxNTgyCWZpbGU6SWtzZWVyIENsaW5pY18xLjEuMV94NjQtc2V0dXAuZXhlCjJVcmFlMklUZUxibFdMN0o5SjBBTXZFVUdDMHRPSjZQdTB3dzcveDZOd202MG9uSlg3c1JNcW90RHowWHptNldpbjVENzgxTHYvY3ZPQno4NEFzbEJRPT0K"
     }
   }
 }
