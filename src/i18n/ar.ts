@@ -27,6 +27,23 @@ export const ar: Translations = {
       appointments: "موعد مُدار",
       uptime: "وقت تشغيل",
     },
+    visual: {
+      title: "مواعيد النهارده",
+      subtitle: "الفترة الصباحية",
+      stats: [
+        { label: "المواعيد", value: "١٨" },
+        { label: "حضروا", value: "١١" },
+        { label: "الإيرادات", value: "٦٬٣٠٠" },
+      ],
+      schedule: [
+        { time: "10:00", name: "منى عادل", status: "done" as const },
+        { time: "10:30", name: "كريم حسن", status: "inRoom" as const },
+        { time: "11:00", name: "سلمى نبيل", status: "waiting" as const },
+      ],
+      statuses: { done: "خلص", inRoom: "في الكشف", waiting: "مستني" },
+      reminder: { title: "اتبعت تذكير", subtitle: "على واتساب" },
+      invoice: { title: "الفاتورة اتدفعت", subtitle: "٤٥٠ جنيه" },
+    },
   },
   whatsapp: {
     label: "تواصل معنا",

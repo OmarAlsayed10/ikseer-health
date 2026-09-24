@@ -25,6 +25,23 @@
       appointments: 'Appointments Managed',
       uptime: 'Uptime',
     },
+    visual: {
+      title: "Today's Appointments",
+      subtitle: 'Morning shift',
+      stats: [
+        { label: 'Appointments', value: '18' },
+        { label: 'Checked in', value: '11' },
+        { label: 'Revenue', value: '6,300' },
+      ],
+      schedule: [
+        { time: '10:00', name: 'Mona Adel', status: 'done' as const },
+        { time: '10:30', name: 'Karim Hassan', status: 'inRoom' as const },
+        { time: '11:00', name: 'Salma Nabil', status: 'waiting' as const },
+      ],
+      statuses: { done: 'Done', inRoom: 'In room', waiting: 'Waiting' },
+      reminder: { title: 'Reminder sent', subtitle: 'via WhatsApp' },
+      invoice: { title: 'Invoice paid', subtitle: '450 EGP' },
+    },
   },
   whatsapp: {
     label: 'Chat with us',
