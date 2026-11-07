@@ -19,8 +19,9 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
       description: t.pricing.plans.free.description,
       cta: t.pricing.plans.free.cta,
       features: t.pricing.plans.free.features,
+      price: t.pricing.plans.free.price,
+      priceNote: t.pricing.plans.free.priceNote,
       isPopular: false,
-      isFree: true,
     },
     {
       key: 'starter' as const,
@@ -28,6 +29,8 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
       description: t.pricing.plans.starter.description,
       cta: t.pricing.plans.starter.cta,
       features: t.pricing.plans.starter.features,
+      price: t.pricing.plans.starter.price,
+      priceNote: t.pricing.plans.starter.priceNote,
       isPopular: false,
     },
     {
@@ -36,6 +39,8 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
       description: t.pricing.plans.professional.description,
       cta: t.pricing.plans.professional.cta,
       features: t.pricing.plans.professional.features,
+      price: t.pricing.plans.professional.price,
+      priceNote: t.pricing.plans.professional.priceNote,
       isPopular: true,
     },
     {
@@ -44,6 +49,8 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
       description: t.pricing.plans.enterprise.description,
       cta: t.pricing.plans.enterprise.cta,
       features: t.pricing.plans.enterprise.features,
+      price: t.pricing.plans.enterprise.price,
+      priceNote: t.pricing.plans.enterprise.priceNote,
       isPopular: false,
     },
   ]
@@ -138,13 +145,12 @@ export function Pricing({ onRequestAccess, onContactSales }: PricingProps) {
               </VStack>
 
               <Box mb="6" py="4" borderTop="1px solid" borderBottom="1px solid" borderColor="gray.100">
-                {plan.isFree ? (
-                  <Text fontSize="18px" fontWeight="700" color="teal.600">
-                    {t.pricing.freeForever}
-                  </Text>
-                ) : (
-                  <Text fontSize="14px" color="gray.500" fontStyle="italic">
-                    {t.pricing.contactForPricing}
+                <Text fontSize="18px" fontWeight="700" color="teal.600">
+                  {plan.price}
+                </Text>
+                {plan.priceNote && (
+                  <Text fontSize="13px" color="gray.500">
+                    {plan.priceNote}
                   </Text>
                 )}
               </Box>
